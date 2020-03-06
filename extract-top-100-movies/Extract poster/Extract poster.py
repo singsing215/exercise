@@ -30,6 +30,12 @@ for ml in movie_list:
     movie_rate = ml.find('td', {'class': 'ratingColumn imdbRating'}).get_text().strip()
     movie_rate_list.append(movie_rate)
     
+    poster = ml.find('td', {'class': 'posterColumn'}).find('a').find('img')
+    img_link = poster['src']
+    image = requests.get(img_link)
+    name = movie_name + '.jpg'
+    with open(name, 'wb') as f:
+        f.write(image.content) # writing the picture
 #print(release_year_list)
 
 def rename(rank_moving_list):
@@ -44,10 +50,10 @@ def rename(rank_moving_list):
     return a
 
 #print(rename(rank_moving_list))
-
+'''
 output=pd.DataFrame({'movie name':movie_name_list,'release year':release_year_list,'rank moving':rename(rank_moving_list),'movie rate':movie_rate_list})
 output.to_csv('C:\\Users\\SingSing\\Documents\\GitHub\\exercise\\extract-top-100-movies\\output.csv')
-
+'''
 
 
 

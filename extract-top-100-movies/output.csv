@@ -1,5 +1,5 @@
 ,movie name,release year,rank moving,movie rate
-0,Gisaengchung,(2019),unchange,8.6
+0,Gisaengchung,(2019),no change,8.6
 1,The Invisible Man,(2020),up,7.6
 2,Knives Out,(2019),up,8.0
 3,Sonic the Hedgehog,(2020),down,6.8
@@ -13,7 +13,7 @@
 11,Uncut Gems,(2019),down,7.6
 12,Once Upon a Time... in Hollywood,(2019),down,7.7
 13,Joker,(2019),down,8.6
-14,Emma.,(2020),unchange,6.9
+14,Emma.,(2020),no change,6.9
 15,Run,(2020),up,
 16,A Quiet Place Part II,(2020),up,
 17,No Time to Die,(2020),down,
@@ -23,9 +23,9 @@
 21,Fantasy Island,(2020),down,4.6
 22,Midway,(2019),down,6.7
 23,Bombshell,(2019),up,6.8
-24,Midsommar,(2019),unchange,7.1
+24,Midsommar,(2019),no change,7.1
 25,The Batman,(2021),down,
-26,Frozen II,(2019),unchange,7.0
+26,Frozen II,(2019),no change,7.0
 27,Guns Akimbo,(2019),up,6.5
 28,Little Women,(2019),down,8.0
 29,Doctor Sleep,(2019),down,7.4
@@ -54,7 +54,7 @@
 52,Contagion,(2011),up,6.6
 53,After We Collided,(2020),down,
 54,Toy Story 4,(2019),down,7.8
-55,Bloodshot,(2020),up,5.9
+55,Bloodshot,(2020),up,5.8
 56,The Lion King,(2019),down,6.9
 57,Snowpiercer,(2013),down,7.1
 58,To All the Boys: P.S. I Still Love You,(2020),down,6.1
