@@ -6,3 +6,10 @@ Use the corpus in the folder of tfidf to identify the 5 most similar documents t
 
 # crawler-to-collect-data
 Use the link of Star Wars VIII (http://www.imdb.com/title/tt2527336/) to crawl movie description, poster and extract movie links.
+
+# extract-top-100-movies
+a. Extract from the 100 popular movies found at https://www.imdb.com/chart/moviemeter/?ref_=nv_mv_mpm the following items: i) movie name, ii) release year, iii) rank moving “up” or “down” or “no change”, and iv) overall rating. 
+
+b. Export the results as a CSV file.
+
+c. Extract all the summary text and the poster for each movie.
