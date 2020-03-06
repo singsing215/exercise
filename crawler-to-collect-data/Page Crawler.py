@@ -21,3 +21,9 @@ image = requests.get(img_link)
 with open('star_war_poster.jpg', 'wb') as f:
     f.write(image.content) # writing the picture
 
+recommended_movies = bs.find('div', {'class': 'rec_page'})
+movie_list = recommended_movies.find_all('div', {'class': 'rec_item'})
+for ml in movie_list:
+    movie_id = ml['data-tconst']
+    movie_link = 'http://www.imdb.com/title/' + movie_id + '/'
+    print(movie_link)
