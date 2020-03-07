@@ -29,6 +29,9 @@ for ml in movie_list:
     movie_id = ml['data-tconst']
     movie_link = 'http://www.imdb.com/title/' + movie_id + '/'
     print(movie_link)
-    
-    
+    new = requests.get(movie_link)
+    bs = BeautifulSoup(new.text, 'lxml')
+    desc = bs.find('div', {'class': 'summary_text'})
+    movie_desc = desc.get_text().strip()
+    print(movie_desc)
     
