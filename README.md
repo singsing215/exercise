@@ -13,3 +13,20 @@ a. Extract from the 100 popular movies found at https://www.imdb.com/chart/movie
 b. Export the results as a CSV file.
 
 c. Extract all the summary text and the poster for each movie.
+
+# evaluate-performance-of-classifier
+a. Read in the datasets of four newsgroups in a folder named “WI2020_Data”.
+
+b. Compute the td-idf representation for each text sample.
+
+c. Train a Support Vector Machine using the training data for classification.
+
+d. Use test data to evaluate the performance of the classifier in terms of accuracy, precision, recall, F1-score, and confusion matrix.
+
+e. Apply Truncated Singular Value Decomposition to the four datasets and set the truncated dimension of the representation to 5, 10, 20, 50, and 100.
+
+f. Based on the results of e), for each of the dimensions (5, 10, 20, 50, 100), train a Support Vector Machine using the training data and evaluate its performance in term of accuracy using the corresponding test data.
+
+g. Based on the results of f), plot the classification accuracy values given the different dimensions using bar chat. The y-axis should be “Accuracy” and the x-axis should be “Dimension”.
+
+h. Visualize the word cloud for each category.
