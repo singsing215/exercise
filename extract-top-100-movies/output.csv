@@ -1,101 +1,101 @@
-,movie name,release year,rank moving,movie rate
-0,Gisaengchung,(2019),no change,8.6
-1,The Invisible Man,(2020),up,7.6
-2,Knives Out,(2019),up,8.0
-3,Sonic the Hedgehog,(2020),down,6.8
-4,Candyman,(2020),up,
-5,The Last Thing He Wanted,(2020),up,4.3
-6,Jojo Rabbit,(2019),down,8.0
-7,Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn,(2020),down,6.6
-8,The Call of the Wild,(2020),up,6.9
-9,1917,(2019),down,8.4
-10,The Gentlemen,(2019),up,8.1
-11,Uncut Gems,(2019),down,7.6
-12,Once Upon a Time... in Hollywood,(2019),down,7.7
-13,Joker,(2019),down,8.6
-14,Emma.,(2020),no change,6.9
-15,Run,(2020),up,
-16,A Quiet Place Part II,(2020),up,
-17,No Time to Die,(2020),down,
-18,Ford v Ferrari,(2019),down,8.1
-19,Candyman,(1992),up,6.6
-20,Jumanji: The Next Level,(2019),down,6.8
-21,Fantasy Island,(2020),down,4.6
-22,Midway,(2019),down,6.7
-23,Bombshell,(2019),up,6.8
-24,Midsommar,(2019),no change,7.1
-25,The Batman,(2021),down,
-26,Frozen II,(2019),no change,7.0
-27,Guns Akimbo,(2019),up,6.5
-28,Little Women,(2019),down,8.0
-29,Doctor Sleep,(2019),down,7.4
-30,Girl on the Third Floor,(2019),up,4.7
-31,Dark Waters,(2019),up,7.6
-32,Charlie's Angels,(2019),down,4.4
-33,The Lighthouse,(2019),down,7.7
-34,The Hunt,(2020),up,
-35,The Irishman,(2019),down,7.9
-36,Onward,(2020),up,7.6
-37,Bad Boys for Life,(2020),down,7.2
-38,Portrait de la jeune fille en feu,(2019),up,8.2
-39,Brahms: The Boy II,(2020),up,4.3
-40,Rumble,(2021),up,
-41,Color Out of Space,(2019),up,6.2
-42,A Beautiful Day in the Neighborhood,(2019),down,7.4
-43,Dolittle,(2020),down,5.5
-44,A Quiet Place,(2018),up,7.5
-45,The Night Clerk,(2020),up,5.2
-46,Terminator: Dark Fate,(2019),down,6.3
-47,Avengers: Endgame,(2019),down,8.5
-48,Marriage Story,(2019),down,8.0
-49,Star Wars: Episode IX - The Rise of Skywalker,(2019),down,6.8
-50,All the Bright Places,(2020),up,6.5
-51,Mulan,(2020),up,
-52,Contagion,(2011),up,6.6
-53,After We Collided,(2020),down,
-54,Toy Story 4,(2019),down,7.8
-55,Bloodshot,(2020),up,5.8
-56,The Lion King,(2019),down,6.9
-57,Snowpiercer,(2013),down,7.1
-58,To All the Boys: P.S. I Still Love You,(2020),down,6.1
-59,Rocketman,(2019),up,7.3
-60,21 Bridges,(2019),down,6.6
-61,Spies in Disguise,(2019),up,6.8
-62,Impractical Jokers: The Movie,(2020),up,6.9
-63,Horse Girl,(2020),down,5.9
-64,Hustlers,(2019),down,6.3
-65,The Matrix 4,(2021),up,
-66,The Way Back,(2020),up,7.5
-67,6 Underground,(2019),down,6.1
-68,Alita: Battle Angel,(2019),down,7.3
-69,The Shawshank Redemption,(1994),up,9.3
-70,Shubh Mangal Zyada Saavdhan,(2020),up,6.7
-71,The Lodge,(2019),up,6.6
-72,Blade Runner 2049,(2017),down,8.0
-73,After,(2019),up,5.4
-74,Queen & Slim,(2019),down,7.0
-75,Tenet,(2020),down,
-76,Titanic,(1997),up,7.8
-77,The Godfather,(1972),down,9.2
-78,The Dark Knight,(2008),down,9.0
-79,Downhill,(2020),down,4.9
-80,Pokémon: Mewtwo Strikes Back - Evolution,(2019),up,5.8
-81,F9,(2020),down,
-82,Black Widow,(2020),down,
-83,Superman: Red Son,(2020),up,6.3
-84,Zombieland: Double Tap,(2019),down,6.8
-85,Hidden Figures,(2016),up,7.8
-86,The Body,(2019),up,5.5
-87,Miracle,(2004),up,7.5
-88,Ad Astra,(2019),down,6.6
-89,Casino Royale,(2006),up,8.0
-90,Mr. Right,(2015),up,6.3
-91,Honey Boy,(2019),down,7.4
-92,Suicide Squad,(2016),down,6.0
-93,Gretel & Hansel,(2020),down,5.4
-94,Maleficent: Mistress of Evil,(2019),down,6.7
-95,Jumanji: Welcome to the Jungle,(2017),up,6.9
-96,Fighting with My Family,(2019),down,7.1
-97,It,(2017),up,7.3
-98,The French Dispatch,(2020),down,
-99,Bhoot: Part One - The Haunted Ship,(2020),up,6.3
+,movie name,release year,rank moving,movie rate,movie desc
+0,Gisaengchung,(2019),no change,8.6,"A poor family, the Kims, con their way into becoming the servants of a rich family, the Parks. But their easy life gets complicated when their deception is threatened with exposure."
+1,The Invisible Man,(2020),up,7.6,"When Cecilia's abusive ex takes his own life and leaves her his fortune, she suspects his death was a hoax. As a series of coincidences turn lethal, Cecilia works to prove that she is being hunted by someone nobody can see."
+2,Knives Out,(2019),up,8.0,"A detective investigates the death of a patriarch of an eccentric, combative family."
+3,Sonic the Hedgehog,(2020),down,6.8,"After discovering a small, blue, fast hedgehog, a small-town police officer must help it defeat an evil genius who wants to do experiments on it."
+4,Candyman,(2020),up,,"A ""spiritual sequel"" to the 1992 horror film 'Candyman' that returns to the now-gentrified Chicago neighborhood where the legend began."
+5,The Last Thing He Wanted,(2020),up,4.3,A veteran D.C. journalist loses the thread of her own narrative when a guilt-propelled errand for her father thrusts her from byline to unwitting subject in the very story she's trying to break. Adapted from Joan Didion's namesake novel.
+6,Jojo Rabbit,(2019),down,8.0,A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.
+7,Birds of Prey: And the Fantabulous Emancipation of One Harley Quinn,(2020),down,6.6,"After splitting with the Joker, Harley Quinn joins superheroes Black Canary, Huntress and Renee Montoya to save a young girl from an evil crime lord."
+8,The Call of the Wild,(2020),up,6.9,A sled dog struggles for survival in the wilds of the Yukon.
+9,1917,(2019),down,8.4,"April 6th, 1917. As a regiment assembles to wage war deep in enemy territory, two soldiers are assigned to race against time and deliver a message that will stop 1,600 men from walking straight into a deadly trap."
+10,The Gentlemen,(2019),up,8.1,"An American expat tries to sell off his highly profitable marijuana empire in London, triggering plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him."
+11,Uncut Gems,(2019),down,7.6,"With his debts mounting and angry collectors closing in, a fast-talking New York City jeweler risks everything in hope of staying afloat and alive."
+12,Once Upon a Time... in Hollywood,(2019),down,7.7,A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.
+13,Joker,(2019),down,8.6,"In Gotham City, mentally troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: the Joker."
+14,Emma.,(2020),no change,6.9,"In 1800s England, a well meaning but selfish young woman meddles in the love lives of her friends."
+15,Run,(2020),up,,A homeschooled teenager begins to suspect her mother is keeping a dark secret from her.
+16,A Quiet Place Part II,(2020),up,,"Following the events at home, the Abbott family now face the terrors of the outside world. Forced to venture into the unknown, they realize the creatures that hunt by sound are not the only threats lurking beyond the sand path."
+17,No Time to Die,(2020),down,,"James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology."
+18,Ford v Ferrari,(2019),down,8.1,American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.
+19,Candyman,(1992),up,6.6,"The Candyman, a murderous soul with a hook for a hand, is accidentally summoned to reality by a skeptic grad student researching the monster's myth."
+20,Jumanji: The Next Level,(2019),down,6.8,"In Jumanji: The Next Level, the gang is back but the game has changed. As they return to rescue one of their own, the players will have to brave parts unknown from arid deserts to snowy mountains, to escape the world's most dangerous game."
+21,Fantasy Island,(2020),down,4.6,A horror adaptation of the popular '70s TV show about a magical island resort.
+22,Midway,(2019),down,6.7,"The story of the Battle of Midway, told by the leaders and the sailors who fought it."
+23,Bombshell,(2019),up,6.8,A group of women take on Fox News head Roger Ailes and the toxic atmosphere he presided over at the network.
+24,Midsommar,(2019),no change,7.1,A couple travels to Sweden to visit a rural hometown's fabled mid-summer festival. What begins as an idyllic retreat quickly devolves into an increasingly violent and bizarre competition at the hands of a pagan cult.
+25,The Batman,(2021),down,,The plot is unknown.
+26,Frozen II,(2019),no change,7.0,"Anna, Elsa, Kristoff, Olaf and Sven leave Arendelle to travel to an ancient, autumn-bound forest of an enchanted land. They set out to find the origin of Elsa's powers in order to save their kingdom."
+27,Guns Akimbo,(2019),up,6.5,A guy relies on his newly-acquired gladiator skills to save his ex-girlfriend from kidnappers.
+28,Little Women,(2019),down,8.0,"Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women each determined to live life on their own terms."
+29,Doctor Sleep,(2019),down,7.4,"Years following the events of ""The Shining,"" a now-adult Dan Torrance must protect a young girl with similar powers from a cult known as The True Knot, who prey on children with powers to remain immortal."
+30,Girl on the Third Floor,(2019),up,4.7,"Don Koch tries to renovate a rundown mansion with a sordid history for his growing family, only to learn that the house has other plans."
+31,Dark Waters,(2019),up,7.6,A corporate defense attorney takes on an environmental lawsuit against a chemical company that exposes a lengthy history of pollution.
+32,Charlie's Angels,(2019),down,4.4,"When a young systems engineer blows the whistle on a dangerous technology, Charlie's Angels are called into action, putting their lives on the line to protect us all."
+33,The Lighthouse,(2019),down,7.7,Two lighthouse keepers try to maintain their sanity whilst living on a remote and mysterious New England island in the 1890s.
+34,The Hunt,(2020),up,,"Twelve strangers wake up in a clearing. They don't know where they are, or how they got there. They don't know they've been chosen - for a very specific purpose - The Hunt."
+35,The Irishman,(2019),down,7.9,A mob hitman recalls his friend Jimmy Hoffa.
+36,Onward,(2020),up,7.6,"Set in a suburban fantasy world, two teenage elf brothers embark on a quest to discover if there is still magic out there."
+37,Bad Boys for Life,(2020),down,7.2,The Bad Boys Mike Lowrey and Marcus Burnett are back together for one last ride in the highly anticipated Bad Boys for Life.
+38,Portrait de la jeune fille en feu,(2019),up,8.2,"On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman."
+39,Brahms: The Boy II,(2020),up,4.3,"After a family moves into the Heelshire Mansion, their young son soon makes friends with a life-like doll called Brahms."
+40,Rumble,(2021),up,,"In a world where monster wrestling is a global sport and monsters are superstar athletes, teenage Winnie seeks to follow in her father's footsteps by coaching a loveable underdog monster into a champion."
+41,Color Out of Space,(2019),up,6.2,A secluded farm is struck by a strange meteorite which has apocalyptic consequences for the family living there and possibly the world.
+42,A Beautiful Day in the Neighborhood,(2019),down,7.4,Based on the true story of a real-life friendship between Fred Rogers and journalist Lloyd Vogel.
+43,Dolittle,(2020),down,5.5,A physician who can talk to animals embarks on an adventure to find a legendary island with a young apprentice and a crew of strange pets.
+44,A Quiet Place,(2018),up,7.5,"In a post-apocalyptic world, a family is forced to live in silence while hiding from monsters with ultra-sensitive hearing."
+45,The Night Clerk,(2020),up,5.2,Voyeuristic hotel clerk becomes the subject of a murder investigation.
+46,Terminator: Dark Fate,(2019),down,6.3,"An augmented human and Sarah Connor must stop an advanced liquid Terminator, from hunting down a young girl, whose fate is critical to the human race."
+47,Avengers: Endgame,(2019),down,8.5,"After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe."
+48,Marriage Story,(2019),down,8.0,Noah Baumbach's incisive and compassionate look at a marriage breaking up and a family staying together.
+49,Star Wars: Episode IX - The Rise of Skywalker,(2019),down,6.8,"The surviving members of the resistance face the First Order once again, and the legendary conflict between the Jedi and the Sith reaches its peak bringing the Skywalker saga to its end."
+50,All the Bright Places,(2020),up,6.5,"The story of Violet and Theodore, who meet and change each other's lives forever. As they struggle with the emotional and physical scars of their past, they discover that even the smallest places and moments can mean something."
+51,Mulan,(2020),up,,A young Chinese maiden disguises herself as a male warrior in order to save her father. A live-action feature film based on Disney's 'Mulan.'
+52,Contagion,(2011),up,6.6,"Healthcare professionals, government officials and everyday people find themselves in the midst of a worldwide epidemic as the CDC works to find a cure."
+53,After We Collided,(2020),down,,"Based on the 2014 romance novel of the same name, this follows the love life of two young adults."
+54,Toy Story 4,(2019),down,7.8,"When a new toy called ""Forky"" joins Woody and the gang, a road trip alongside old and new friends reveals how big the world can be for a toy."
+55,Bloodshot,(2020),up,5.8,"Ray Garrison, a slain soldier, is re-animated with superpowers."
+56,The Lion King,(2019),down,6.9,"After the murder of his father, a young lion prince flees his kingdom only to learn the true meaning of responsibility and bravery."
+57,Snowpiercer,(2013),down,7.1,"In a future where a failed climate-change experiment has killed all life except for the lucky few who boarded the Snowpiercer, a train that travels around the globe, a new class system emerges."
+58,To All the Boys: P.S. I Still Love You,(2020),down,6.1,Lara Jean and Peter have just taken their relationship from pretend to officially official when another recipient of one of her old love letters enters the picture.
+59,Rocketman,(2019),up,7.3,A musical fantasy about the fantastical human story of Elton John's breakthrough years.
+60,21 Bridges,(2019),down,6.6,An embattled NYPD detective is thrust into a citywide manhunt for a pair of cop killers after uncovering a massive and unexpected conspiracy.
+61,Spies in Disguise,(2019),up,6.8,"When the world's best spy is turned into a pigeon, he must rely on his nerdy tech officer to save the world."
+62,Impractical Jokers: The Movie,(2020),up,6.9,The story of a humiliating high school mishap from 1992 that sends the Impractical Jokers on the road competing in hidden-camera challenges for the chance to turn back the clock and redeem three of the four Jokers.
+63,Horse Girl,(2020),down,5.9,"Sarah, a socially isolated woman with a fondness for arts and crafts, horses, and supernatural crime shows finds her increasingly lucid dreams trickling into her waking life."
+64,Hustlers,(2019),down,6.3,"Inspired by the viral New York Magazine article, Hustlers follows a crew of savvy former strip club employees who band together to turn the tables on their Wall Street clients."
+65,The Matrix 4,(2021),up,,The plot is currently unknown.
+66,The Way Back,(2020),up,7.5,"Jack Cunningham was a HS basketball phenom who walked away from the game, forfeiting his future. Years later, when he reluctantly accepts a coaching job at his alma mater, he may get one last shot at redemption."
+67,6 Underground,(2019),down,6.1,"Meet a new kind of action hero. Six untraceable agents, totally off the grid. They've buried their pasts so they can change the future."
+68,Alita: Battle Angel,(2019),down,7.3,"A deactivated cyborg is revived, but cannot remember anything of her past life and goes on a quest to find out who she is."
+69,The Shawshank Redemption,(1994),up,9.3,"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+70,Shubh Mangal Zyada Saavdhan,(2020),up,6.7,"The road to achieving a happy ending is a little too rough for two guys Kartik and Aman. While Aman's family tries hard to battle his love for Kartik, Kartik isn't prepared to step back until he marries Aman."
+71,The Lodge,(2019),up,6.6,"A soon-to-be stepmom is snowed in with her fiancé's two children at a remote holiday village. Just as relations begin to thaw between the trio, some strange and frightening events take place."
+72,Blade Runner 2049,(2017),down,8.0,"Young Blade Runner ""K""'s (Ryan Gosling's) discovery of a long-buried secret leads him to track down former Blade Runner Rick Deckard (Harrison Ford), who's been missing for thirty years."
+73,After,(2019),up,5.4,A young woman falls for a guy with a dark secret and the two embark on a rocky relationship. Based on the novel by Anna Todd.
+74,Queen & Slim,(2019),down,7.0,A couple's first date takes an unexpected turn when a police officer pulls them over.
+75,Tenet,(2020),down,,"An action epic revolving around international espionage, time travel, and evolution. Possibly about a man trying to prevent World War 3 through time travel and rebirth."
+76,Titanic,(1997),up,7.8,"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic."
+77,The Godfather,(1972),down,9.2,The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.
+78,The Dark Knight,(2008),down,9.0,"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice."
+79,Downhill,(2020),down,4.9,"Barely escaping an avalanche during a family ski vacation in the Alps, a married couple is thrown into disarray as they are forced to reevaluate their lives and how they feel about each other."
+80,Pokémon: Mewtwo Strikes Back - Evolution,(2019),up,5.8,"After a scientific experiment leads to the creation of a clone of Mewtwo, he sets out to destroy the world. Ash and his friends then decide to thwart Mewtwo's evil plans."
+81,F9,(2020),down,,"Cypher enlists the help of Jakob, Dom's younger brother to take revenge on Dom and his team."
+82,Black Widow,(2020),down,,A film about Natasha Romanoff in her quests between the films Civil War and Infinity War.
+83,Superman: Red Son,(2020),up,6.3,"What if baby Kal-El's rocket landed, not in Kansas, but in the Soviet Union? That is the premise of this Elseworld's tale from DC Comics."
+84,Zombieland: Double Tap,(2019),down,6.8,"Columbus, Tallahassee, Wichita, and Little Rock move to the American heartland as they face off against evolved zombies, fellow survivors, and the growing pains of the snarky makeshift family."
+85,Hidden Figures,(2016),up,7.8,The story of a team of female African-American mathematicians who served a vital role in NASA during the early years of the U.S. space program.
+86,The Body,(2019),up,5.5,"When the body of a powerful businesswoman disappears from the morgue, the inspector in charge hunts for the truth. But when he questions her husband he realizes that there is much more to the case than meets the eye."
+87,Miracle,(2004),up,7.5,"The true story of Herb Brooks, the player-turned-coach who led the 1980 U.S. Olympic hockey team to victory over the seemingly invincible Soviet squad."
+88,Ad Astra,(2019),down,6.6,"Astronaut Roy McBride undertakes a mission across an unforgiving solar system to uncover the truth about his missing father and his doomed expedition that now, 30 years later, threatens the universe."
+89,Casino Royale,(2006),up,8.0,"After earning 00 status and a licence to kill, Secret Agent James Bond sets out on his first mission as 007. Bond must defeat a private banker funding terrorists in a high-stakes game of poker at Casino Royale, Montenegro."
+90,Mr. Right,(2015),up,6.3,"A girl falls for the ""perfect"" guy, who happens to have a very fatal flaw: he's a hitman on the run from the crime cartels who employ him."
+91,Honey Boy,(2019),down,7.4,A young actor's stormy childhood and early adult years as he struggles to reconcile with his father and deal with his mental health.
+92,Suicide Squad,(2016),down,6.0,A secret government agency recruits some of the most dangerous incarcerated super-villains to form a defensive task force. Their first mission: save the world from the apocalypse.
+93,Gretel & Hansel,(2020),down,5.4,"A long time ago in a distant fairy tale countryside, a young girl leads her little brother into a dark wood in desperate search of food and work, only to stumble upon a nexus of terrifying evil."
+94,Maleficent: Mistress of Evil,(2019),down,6.7,"Maleficent and her goddaughter Aurora begin to question the complex family ties that bind them as they are pulled in different directions by impending nuptials, unexpected allies and dark new forces at play."
+95,Jumanji: Welcome to the Jungle,(2017),up,6.9,"Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game."
+96,Fighting with My Family,(2019),down,7.1,A former wrestler and his family make a living performing at small venues around the country while his kids dream of joining World Wrestling Entertainment.
+97,It,(2017),up,7.3,"In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town."
+98,The French Dispatch,(2020),down,,"A love letter to journalists set in an outpost of an American newspaper in a fictional 20th-century French city that brings to life a collection of stories published in ""The French Dispatch"" magazine."
+99,Bhoot: Part One - The Haunted Ship,(2020),up,6.3,A couple is trapped on an abandoned ship lying static on a beach.
