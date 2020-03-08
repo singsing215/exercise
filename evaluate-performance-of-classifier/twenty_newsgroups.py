@@ -240,8 +240,8 @@ def strip_newsgroup_footer(text):
         return text
 
 
-TRAIN_FOLDER = 'WI2020_Data'
-TEST_FOLDER = '20news-bydate-test'
+TRAIN_FOLDER = 'WI2020_Data//20news-bydate-train'
+TEST_FOLDER = 'WI2020_Data//20news-bydate-test'
 
 
 # only this function is modified in this .py file
