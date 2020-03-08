@@ -245,7 +245,9 @@ TEST_FOLDER = 'WI2020_Data//20news-bydate-test'
 
 
 # only this function is modified in this .py file
-def load_20newsgroups(data_home, subset='train', categories=None,
+def load_20newsgroups(data_home, subset='train', categories=[
+        'alt.atheism', 'comp.sys.mac.hardware', 'rec.sport.baseball', 
+        'sci.med'],
                       shuffle=True, random_state=42,
                       remove=()):
     """Load the filenames and data from the 20 newsgroups dataset.
