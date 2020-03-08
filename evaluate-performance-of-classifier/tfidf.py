@@ -4,10 +4,7 @@ import os
 import math
 import pandas as pd
 from pandas import ExcelWriter
-from twenty_newsgroups import load_20newsgroups
 
-train_data = load_20newsgroups(data_home='./', subset='train')
-test_data = load_20newsgroups(data_home='./', subset='test')
 
 def term_freq(word_list):  # words in a document
     word_dict = {}
@@ -37,35 +34,29 @@ def inv_doc_freq(term_set, doc_name2word_list):
     return idf_dict
 
 
-doc_name_list = []
-for i in range(2249):
-    doc_name = train_data.filenames[i]
-    doc_name_list.append(doc_name)
-
-
 if __name__ == '__main__':
-    term_set = set()
     doc_name2word_list = {}
-    
     doc_name2tf_dict = {}
+    term_set = set()
     '''read all txt files name from directory rootdir
     All the txt files should be put under the same directory as this python file'''
     rootdir = os.path.dirname(os.path.abspath(__file__))
+    doc_name_list = [item for item in os.listdir(rootdir) if item.endswith('.txt')]
     for doc_name in doc_name_list:
-        content = ''
-        for line in train_data.data :
-            content += line
-        content = content.strip()
-        content = re.sub('[^A-Za-z\s]', ' ', content)
-        content = content.lower()
-        word_list = content.split()
-        doc_name2word_list[doc_name] = word_list
-        doc_name2tf_dict[doc_name] = term_freq(word_list)
-        # prepare the term list from all docs
-        term_set = term_set | set(word_list)
+        with open(os.path.join(rootdir, doc_name), 'r') as f:
+            content = ''
+            for line in f.readlines():
+                content += line
+            content = content.strip()
+            content = re.sub('[^A-Za-z\s]', ' ', content)
+            content = content.lower()
+            word_list = content.split()
+            doc_name2word_list[doc_name] = word_list
+            doc_name2tf_dict[doc_name] = term_freq(word_list)
+            # prepare the term list from all docs
+            term_set = term_set | set(word_list)
     idf_dict = inv_doc_freq(term_set, doc_name2word_list)
     term_list = list(term_set)
-    
     tf_idf = pd.DataFrame(columns=doc_name_list, index=term_list)
     for (doc_name, word_list) in doc_name2word_list.items():
         for w in term_set:
@@ -79,7 +70,3 @@ if __name__ == '__main__':
     tf_idf.to_excel(writer, 'tfidf')
     writer.save()
     print('File Output Success')
-
-
-
-
