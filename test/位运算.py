@@ -55,4 +55,4 @@ def findTheDifference(s, t):
 import math
 def mySqrt(x):
     return int(math.sqrt(x))
-print(mySqrt(1000))
+# print(mySqrt(1000))
