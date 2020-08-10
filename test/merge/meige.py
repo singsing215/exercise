@@ -1,3 +1,4 @@
+# -*- coding: UTF-8 -*-
 #最长重复子数组    动态规划
 def findLength(A, B):
     n = len(A)
