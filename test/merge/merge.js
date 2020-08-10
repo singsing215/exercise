@@ -6,13 +6,12 @@ class TreeNode {
 }
 
 function f(arr) {
-    function toNode(item) {//转换数组项至节点
-        if (item === null || item === undefined) { return null }
-        else { return new TreeNode(item) }
+    function toNode(item) { //转换数组项至节点
+        if (item === null || item === undefined) { return null } else { return new TreeNode(item) }
     }
     let queue = [];
     const tree = toNode(arr.shift());
-    queue.push(tree);//入队列第一个元素
+    queue.push(tree); //入队列第一个元素
     while (arr.length > 0) {
         //当数组里还有项的时候就拿数组的项去填充队列
         let current = queue.shift();
@@ -31,37 +30,37 @@ const isSymmetric = (root) => {
     return isMirror(root, root)
 }
 const isMirror = (L, R) => {
-    if (L === null && R === null) return true
-    if (L === null || R === null || L.val != R.val) return false
-    return isMirror(L.left, R.right) && isMirror(L.right, R.left)
-}
-// console.log(isSymmetric(f([1,2,2,null,3,null,3])))
+        if (L === null && R === null) return true
+        if (L === null || R === null || L.val != R.val) return false
+        return isMirror(L.left, R.right) && isMirror(L.right, R.left)
+    }
+    // console.log(isSymmetric(f([1, 2, 2, null, 3, null, 3])))
 
 // 二叉树的直径
 const diameterOfBinaryTree = (root) => {
-    let ans = 1 // 默认为1是因为默认了根节点自身的路径长度
-    const depth = (rootNode) => {
-        if (!rootNode) return 0
-        let L = depth(rootNode.left)
-        let R = depth(rootNode.right)
-        ans = Math.max(ans, L + R + 1) //左子树深度(节点个数) + 右子树深度（节点个数） + 1个根节点
-        return Math.max(L, R) + 1//左右子树深度的最大值 + 1,便是以根节点为数的最大深度
-    }    
-    depth(root)
-    return ans - 1// 由于depth函数中已经默认加上数节点的自身根节点路径了，故此处需减1
-}
-// console.log(diameterOfBinaryTree(f([1,2,3,4,5])))
+        let ans = 1 // 默认为1是因为默认了根节点自身的路径长度
+        const depth = (rootNode) => {
+            if (!rootNode) return 0
+            let L = depth(rootNode.left)
+            let R = depth(rootNode.right)
+            ans = Math.max(ans, L + R + 1) //左子树深度(节点个数) + 右子树深度（节点个数） + 1个根节点
+            return Math.max(L, R) + 1 //左右子树深度的最大值 + 1,便是以根节点为数的最大深度
+        }
+        depth(root)
+        return ans - 1 // 由于depth函数中已经默认加上数节点的自身根节点路径了，故此处需减1
+    }
+    // console.log(diameterOfBinaryTree(f([1,2,3,4,5])))
 
 // 翻转二叉树
 const invertTree = (root) => {
-    if(root === null) return null
-    let L = invertTree(root.left)
-    let R = invertTree(root.right)
-    root.left = R
-    root.right = L
-    return root
-}
-// console.log(invertTree(f([4,2,7,1,3,6,9])))
+        if (root === null) return null
+        let L = invertTree(root.left)
+        let R = invertTree(root.right)
+        root.left = R
+        root.right = L
+        return root
+    }
+    // console.log(invertTree(f([4,2,7,1,3,6,9])))
 
 // 平衡二叉树
 const isBalanced = (root) => {
@@ -69,59 +68,59 @@ const isBalanced = (root) => {
     if (Math.abs(getHeight(root.left) - getHeight(root.right)) > 1) return false
     return isBalanced(root.left) && isBalanced(root.right)
 }
-const getHeight = (root) =>{
-    if (!root) return 0
-    return Math.max(getHeight(root.left), getHeight(root.right)) + 1
-}
-// console.log(isBalanced(f([1,2,2,3,3,null,null,4,4])))
+const getHeight = (root) => {
+        if (!root) return 0
+        return Math.max(getHeight(root.left), getHeight(root.right)) + 1
+    }
+    // console.log(isBalanced(f([1,2,2,3,3,null,null,4,4])))
 
 // 二叉树的深度
 const maxDepth = (root) => {
-    if (!root) return 0
-    return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1
-}
-// console.log(maxDepth(f([3,9,20,null,null,15,7])))
+        if (!root) return 0
+        return Math.max(maxDepth(root.left), maxDepth(root.right)) + 1
+    }
+    // console.log(maxDepth(f([3,9,20,null,null,15,7])))
 
 // 合并二叉树
 const mergeTrees = (t1, t2) => {
-    if(t1 === null) return t2
-    if(t2 === null) return t1
-    t1.val += t2.val
-    t1.left = mergeTrees(t1.left,t2.left)
-    t1.right = mergeTrees(t1.right,t2.right)
-    return t1
-}
-// console.log(mergeTrees(f([1,3,2,5]),f([2,1,3,null,4,null,7])))
+        if (t1 === null) return t2
+        if (t2 === null) return t1
+        t1.val += t2.val
+        t1.left = mergeTrees(t1.left, t2.left)
+        t1.right = mergeTrees(t1.right, t2.right)
+        return t1
+    }
+    // console.log(mergeTrees(f([1,3,2,5]),f([2,1,3,null,4,null,7])))
 
 // 最小
 const minNumber = (nums) => {
-    return nums.sort((a, b) => ('' + a + b) - ('' + b + a)) //最小的数
-}
-// console.log(minNumber([3,30,34,9,5])) //[ 30, 3, 34, 5, 9 ]
+        return nums.sort((a, b) => ('' + a + b) - ('' + b + a)) //最小的数
+    }
+    // console.log(minNumber([3,30,34,9,5])) //[ 30, 3, 34, 5, 9 ]
 
 //最大
 const maxNumber = (nums) => {
-    return nums.sort((a, b) => ('' + b + a) - ('' + a + b));
-}
-// console.log(maxNumber([3,30,34,9,5])) //[ 9, 5, 34, 3, 30 ]
+        return nums.sort((a, b) => ('' + b + a) - ('' + a + b));
+    }
+    // console.log(maxNumber([3,30,34,9,5])) //[ 9, 5, 34, 3, 30 ]
 
 //升序
 const sortNum = (nums) => {
-    return nums.sort((a, b) => a - b); //负数不变
-}
-// console.log(sortNum([3,30,34,5,9])) //[ 3, 5, 9, 30, 34 ]
+        return nums.sort((a, b) => a - b); //负数不变
+    }
+    // console.log(sortNum([3,30,34,5,9])) //[ 3, 5, 9, 30, 34 ]
 
 //降序
 const sortNumber = (nums) => {
-    return nums.sort((a, b) => b - a); //正数变
-}
-// console.log(sortNumber([3,30,34,5,9])) //[ 34, 30, 9, 5, 3 ]
+        return nums.sort((a, b) => b - a); //正数变
+    }
+    // console.log(sortNumber([3,30,34,5,9])) //[ 34, 30, 9, 5, 3 ]
 
 //倒序
 const sortNumb = (nums) => {
-    return nums.sort((a, b) => a + b);
-}
-// console.log(sortNumb([3,34,30,5,9])) //a+b [ 9, 5, 34, 30, 3 ] //b+a [ 9, 5, 34, 30, 3 ]
+        return nums.sort((a, b) => a + b);
+    }
+    // console.log(sortNumb([3,34,30,5,9])) //a+b [ 9, 5, 34, 30, 3 ] //b+a [ 9, 5, 34, 30, 3 ]
 
 //合并两个数组
 const array1 = ['a', 'b', 'c'];
@@ -409,7 +408,7 @@ const throttle = (func, wait) => {
     }
     // setInterval(throttle(func,1000),1000) // 一秒打出一次boom
 
-    const wm1 = new WeakMap(),
+const wm1 = new WeakMap(),
     wm2 = new WeakMap(),
     wm3 = new WeakMap();
 

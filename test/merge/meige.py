@@ -82,7 +82,7 @@ def generate(numRows):
             if(dp[i][j]==0):
                 dp[i][j]=dp[i-1][j-1]+dp[i-1][j]
     return dp
-print(generate(5))
+# print(generate(5))
 
 # 最小的k个数
 def getLeastNumbers(arr, k):
@@ -108,7 +108,7 @@ def maxSlidingWindow(nums, k):
     for i in range(0,len(nums)-k+1):
         res.append(max(nums[i:i+k]))
     return res
-print(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3))
+# print(maxSlidingWindow([1,3,-1,-3,5,3,6,7], 3))
 
 #词典中最长的单词
 def longestWord(words):
@@ -375,11 +375,11 @@ def intersection2(nums1, nums2):
 # print(intersection2([1,2,2,1], [2,2]))
 
 #合并排序的数组
-def merge(A, m, B, n):
+def mergee(A, m, B, n):
     A[m:] = B
     A.sort()
     return A
-# print(merge([1,2,3,0,0,0], 3, [2,5,6], 3))
+# print(mergee([1,2,3,0,0,0], 3, [2,5,6], 3))
 
 # 删除排序数组中的重复项
 def removeDuplicates(nums):
