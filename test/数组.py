@@ -164,6 +164,3 @@ def countNegatives(grid):
     return str(grid).count('-')
 # print(countNegatives([[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]))
 
-
-
-print ("%e"%24436)

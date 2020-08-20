@@ -1,0 +1,196 @@
+// 最小
+const minNumber = (nums) => {
+        return nums.sort((a, b) => ('' + a + b) - ('' + b + a)) //最小的数
+    }
+    // console.log(minNumber([3,30,34,9,5])) //[ 30, 3, 34, 5, 9 ]
+
+//最大
+const maxNumber = (nums) => {
+        return nums.sort((a, b) => ('' + b + a) - ('' + a + b));
+    }
+    // console.log(maxNumber([3,30,34,9,5])) //[ 9, 5, 34, 3, 30 ]
+
+//升序
+const sortNum = (nums) => {
+        return nums.sort((a, b) => a - b); //负数不变
+    }
+    // console.log(sortNum([3,30,34,5,9])) //[ 3, 5, 9, 30, 34 ]
+
+//降序
+const sortNumber = (nums) => {
+        return nums.sort((a, b) => b - a); //正数变
+    }
+    // console.log(sortNumber([3,30,34,5,9])) //[ 34, 30, 9, 5, 3 ]
+
+//倒序
+const sortNumb = (nums) => {
+        return nums.sort((a, b) => a + b);
+    }
+    // console.log(sortNumb([3,34,30,5,9])) //a+b [ 9, 5, 34, 30, 3 ] //b+a [ 9, 5, 34, 30, 3 ]
+
+//合并两个数组
+const array1 = ['a', 'b', 'c'];
+const array2 = ['d', 'e', 'f'];
+const array3 = array1.concat(array2);
+// console.log(array3);
+
+// 有效的括号
+const isValid = (x) => {
+        if (x.length % 2) return false
+        let stack = []
+        for (i = 0; i < x.length; i++) {
+            switch (x[i]) {
+                case "(":
+                    {
+                        stack.push(x[i])
+                        break
+                    }
+                case "[":
+                    {
+                        stack.push(x[i])
+                        break
+                    }
+                case "{":
+                    {
+                        stack.push(x[i])
+                        break
+                    }
+                case ")":
+                    {
+                        if (stack.pop() !== "(") return false
+                        break
+                    }
+                case "]":
+                    {
+                        if (stack.pop() !== "[") return false
+                        break
+                    }
+                case "}":
+                    {
+                        if (stack.pop() !== "{") return false
+                        break
+                    }
+            }
+        }
+        return !stack.length
+    }
+    // console.log(isValid("()(())"))
+
+// 删除最外层的括号
+const removeOuterParentheses = (x) => {
+        if (x.length % 2) return "invalid input"
+        var stack = []
+        var index = 0
+        for (i = 0; i < x.length; i++) {
+            if (x[i] === '(') {
+                index++
+                if (index >= 2) {
+                    stack.push(x[i]) //123   23
+                }
+            } else if (x[i] === ')') {
+                index--
+                if (index >= 1) {
+                    stack.push(x[i]) //21  21
+                }
+            }
+        }
+        return stack.join('')
+    }
+    // console.log(removeOuterParentheses("((()))"))
+
+//下一个更大元素
+const nextGreaterElement = (nums1, nums2) => {
+        return nums1.map(cur => { //nums1.map(cur => {})
+            let i = nums2.indexOf(cur)
+            for (i; i < nums2.length; i++) {
+                if (nums2[i] > cur) {
+                    return nums2[i]
+                }
+            }
+            return -1
+        })
+    }
+    // console.log(nextGreaterElement([4,1,2],[1,3,4,2]))
+
+//比较含退格的字符串
+const backspaceCompare = (S, T) => {
+    if (S === T) return true //判断值+类型
+    if (output(S) === output(T)) return true
+    else return false
+}
+const output = (str) => {
+        let arr = str.split("")
+        let stack = []
+        arr.forEach(i => {
+            if (i === '#') stack.pop()
+            else stack.push(i)
+        })
+        return stack.join('')
+    }
+    // console.log(backspaceCompare("ab#c","ad#c"))
+
+// 滑动窗口的最大值
+const maxSlidingWindow = (nums, k) => {
+        if (nums.length === 0) return []
+        var stack = []
+        for (i = 0; i < nums.length - k + 1; i++) {
+            let arr = []
+            for (j = i; j < i + k; j++) {
+                arr.push(nums[j])
+            }
+            stack.push(Math.max(...arr)) //对象中的扩展运算符(...)用于取出参数对象中的所有可遍历属性，拷贝到当前对象之中
+        }
+        return stack
+    }
+    // console.log(maxSlidingWindow([1,3,-1,-3,5,3,6,7],3))
+
+// [['a','0'],['b','1'],['c','2']] => ['abc','ab2','a1c','a12','0bc','0b2','01c','012'']
+const f1 = (arr) => {
+        var arr1 = [] //存放子数组长度              
+        var arr2 = [] //存放临时数组长度           
+        var stack = [] //存放结果           
+        var num = 1 //获取所有情况                     
+        for (var i = 0; i < arr.length; i++) {
+            arr1.push(arr[i].length)
+            arr2.push(0)
+            num = num * arr[i].length
+        }
+        var str = ""
+        for (var k = 0; k < num; k++) {
+            var num1 = k
+            str = ""
+            for (var j = 0; j < arr.length; j++) {
+                arr2[j] = num1 % arr1[j] //获取当前数组的元素  
+                str = str + arr[j][arr2[j]] //获取当前情况的元素      
+                num1 = parseInt(num1 / arr1[j]) //获取下一个数组的值      
+            }
+            stack.push(str)
+        }
+        return stack
+    }
+    // console.log(f1([["a", "0"], ["b", "1"], ["c", "2"]]))
+
+// 防抖--最后一次事件后执行函数。优化浏览器防止假死。输入框最后触发ajax请求次数。
+const func = () => { console.log('boom') }
+const debounce = (func, wait) => {
+        var timeout
+        return () => {
+            if (timeout) clearTimeout(timeout)
+            timeout = setTimeout(() => { func.apply(this, arguments) }, wait) //setTimeout()方法设置一个定时器，该定时器在定时器到期后执行一个函数或指定的一段代码。//arguments 是一个对应于传递给函数的参数的类数组对象
+        }
+    }
+    // setInterval(debounce(func, 1000), 1000) // 第一次在2s后触发，之后每1s触发一次//setInterval() 方法重复调用一个函数或执行一个代码段，在每次调用之间具有固定的时间延迟。
+
+// 节流--不管事件触发有多频繁，都会保证定时执行一次函。输入框定时触发ajax请求次数。
+const throttle = (func, wait) => {
+        var timeout
+        return () => {
+            if (!timeout) {
+                timeout = setTimeout(() => {
+                    timeout = null;
+                    func.apply(this, arguments)
+                }, wait)
+            }
+        }
+    }
+    // setInterval(throttle(func,1000),1000) // 一秒打出一次boom
