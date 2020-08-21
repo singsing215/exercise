@@ -34,6 +34,27 @@ const array2 = ['d', 'e', 'f'];
 const array3 = array1.concat(array2);
 // console.log(array3);
 
+// 求数组第中间大和第k大的数
+const find = (num, k) => {
+        num = num.sort()
+        let middle = num.length / 2
+        if (num.length % 2 == 0) {
+            middle = (num[middle] + num[middle - 1]) / 2
+        }
+        if (num.length % 2 != 0) {
+            middle = (num[Math.floor(middle)]) //floor向下取整int, round四舍五入, ceil向上取整
+        }
+        if (k > num.length) {
+            k = null
+        }
+        if (k <= num.length) {
+            num = num.sort((a, b) => a + b)
+            k = num[k - 1]
+        }
+        return { middle, k } //返回多个值
+    }
+    // console.log(find([1, 2, 3, 4, 5, 5], 1))
+
 // 有效的括号
 const isValid = (x) => {
         if (x.length % 2) return false
