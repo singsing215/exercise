@@ -1,28 +1,32 @@
 <div class="container">
     <div class="left"></div>
-    <div class="main"><h1>三栏布局,左右自适应,中间自适应</h1></div>
+    <div class="main">
+        <h1>三栏布局,左右自适应,中间自适应</h1>
+    </div>
     <div class="right"></div>
 </div>
 
-
+<!-- Three values: flex-grow | flex-shrink | flex-basis -->
 <style>
     .container {
         display: flex;
     }
+    
     .left {
-        flex: 0 200px;        /* Three values: flex-grow | flex-shrink | flex-basis */
-        height: 200px;
+        flex: 0 200px;
         background-color: blue;
+        height: 200px;
     }
+    
     .right {
         flex: 0 200px;
-        height: 200px;
         background-color: green;
+        height: 200px;
     }
+    
     .main {
         flex-grow: 1;
-        height: 200px;
         background-color: red;
+        height: 200px;
     }
 </style>
-

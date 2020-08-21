@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="left">
+        <h1 class="content">两栏布局，左边定宽，里面的内容居中，右边自适应。</h1>
+    </div>
+    <div class="right"></div>
+</div>
+
+<style>
+    .container {
+        display: flex;
+    }
+    
+    .content {
+        text-align: center;
+    }
+    
+    .left {
+        background: red;
+        width: 1200px;
+        height: 200px;
+    }
+    
+    .right {
+        flex: 1;
+        background: black;
+        height: 200px;
+    }
+</style>

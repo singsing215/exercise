@@ -1,24 +1,28 @@
 <div class="container">
     <div class="left"></div>
     <div class="right"></div>
-    <div class="main"><h1>三栏布局,左右定宽,中间自适应</h1></div>
+    <div class="main">
+        <h1>三栏布局,左右定宽,中间自适应</h1>
+    </div>
 </div>
 
 <style>
     .left {
-        height: 200px;
-        width: 200px;
         float: left;
         background-color: red;
-    }
-    .right {
+        height: 100%;
         width: 200px;
-        height: 200px;
+    }
+    
+    .right {
         float: right;
         background-color: green;
+        width: 200px;
+        height: 100%;
     }
+    
     .main {
-        height: 200px;
         background-color: blue;
+        height: 100%;
     }
 </style>
