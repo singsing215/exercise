@@ -270,6 +270,8 @@ def minSubsequence(nums):
 # print(minSubsequence([4,3,10,9,8]))
 
 # 合并区间
+# 输入: [[1,3],[2,6],[8,10],[15,18]]
+# 输出: [[1,6],[8,10],[15,18]]
 def merge(intervals):
     intervals.sort()
     res = []
@@ -284,6 +286,8 @@ def merge(intervals):
 # print(merge([[1,3],[2,6],[8,10],[15,18]]))
 
 # 宝石与石头
+# 输入: J = "aA", S = "aAAbbbb"
+# 输出: 3
 def numJewelsInStones(J, S):
     return sum(s in J for s in S)
 # print(numJewelsInStones("aA", "aAAbbbb"))
@@ -538,7 +542,7 @@ def lemonadeChange(bills):
     for i in bills:
         if i==5:
             five += 1
-        elif i==10:
+        elif i==10:3
             ten += 1
             five -= 1
         else: #-5-5-5    -10-5

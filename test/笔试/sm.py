@@ -1,3 +1,7 @@
+# 2 3 列表 A = [int(i) for i in input().split()]
+# 0 3 数据组 a,b = map(int, input().split())
+# aaabbaa 字符串 line = input()
+
 # 样例输入
 # 1 2 第一行有两个数字 n,m，分别表示集合 A 和集合 B 的元素个数。
 # 1 第二行集合 A
