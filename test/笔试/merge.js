@@ -215,3 +215,134 @@ const throttle = (func, wait) => {
         }
     }
     // setInterval(throttle(func,1000),1000) // 一秒打出一次boom
+
+//用队列实现栈
+class MyStack {
+    constructor() {
+        this.stack = [];
+    }
+    push(x) {
+        this.stack[this.stack.length] = x;
+        return this.stack.length;
+    }
+    pop() {
+        if (this.empty()) return undefined;
+        let popEle = this.stack[this.stack.length - 1];
+        this.stack.length = this.stack.length - 1;
+        return popEle;
+    }
+    top() {
+        return this.stack[this.stack.length - 1];
+    }
+    empty() {
+        if (this.stack.length === 0) return true;
+        else return false;
+    }
+    getMin() {
+        var arr = this.stack.sort();
+        return arr[0];
+    }
+}
+// var obj = new MyStack()
+// obj.push("7")
+// obj.push("2")
+// obj.push("3")
+// console.log(obj)
+// var param_2 = obj.pop()
+// console.log(param_2)
+// var param_3 = obj.top()
+// console.log(param_3)
+// var param_4 = obj.empty()
+// console.log(param_4)
+// var param_5 = obj.getMin()
+// console.log(param_5)
+
+//最小栈
+class MinStack {
+    constructor() {
+        this.stack = [];
+        this.min_stack = [Infinity];
+    }
+    push(x) {
+        this.stack.push(x);
+        this.min_stack.push(Math.min(this.min_stack[this.min_stack.length - 1], x));
+    }
+    pop() {
+        this.stack.pop();
+        this.min_stack.pop();
+    }
+    top() {
+        return this.stack[this.stack.length - 1];
+    }
+    getMin() {
+        return this.min_stack[this.min_stack.length - 1];
+    }
+}
+// var minStack = new MinStack();
+// minStack.push(-2);
+// minStack.push(0);
+// minStack.push(-3);
+// minStack.getMin(); //--> 返回 -3.
+// minStack.pop();
+// minStack.top(); //--> 返回 0.
+// minStack.getMin(); //--> 返回 -2.
+// console.log(minStack)
+
+// var obj = new MinStack()
+// obj.push("3")
+// obj.push("2")
+// obj.push("1")
+// console.log(obj)
+// var param_3 = obj.getMin()
+// console.log(param_3)
+// var param_2 = obj.pop()
+// console.log(param_2)
+// var param_5 = obj.getMin()
+// console.log(param_5)
+
+// 用栈实现队列
+class MyQueue {
+    constructor() {
+        this.stack1 = [];
+        this.stack2 = [];
+    }
+    push(x) {
+        this.stack1.push(x);
+    }
+    pop() {
+        while (this.stack1.length) {
+            this.stack2.push(this.stack1.pop()); //1234   4321
+        }
+        const item = this.stack2.pop(); // 1
+        if (this.stack2.length) { // 432  234
+            while (this.stack2.length) {
+                this.stack1.push(this.stack2.pop());
+            }
+        }
+        return item;
+    }
+    peek() {
+        while (this.stack1.length) {
+            this.stack2.push(this.stack1.pop()); //1234  4321
+        }
+        const item = this.stack2[this.stack2.length - 1]; // 1
+        while (this.stack2.length) { // 4321   1234
+            this.stack1.push(this.stack2.pop());
+        }
+        return item;
+    }
+    empty() {
+        if (this.stack1.length === 0) return true;
+        else return false;
+    }
+}
+// var obj = new MyQueue()
+// obj.push(1)
+// obj.push(2)
+// console.log(obj)
+// var p2 = obj.peek()
+// console.log(p2)
+// var p3 = obj.pop()
+// console.log(p3)
+// var p4 = obj.empty()
+// console.log(p4)

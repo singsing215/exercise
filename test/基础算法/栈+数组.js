@@ -66,15 +66,27 @@ class MinStack {
         return this.min_stack[this.min_stack.length - 1];
     }
 }
-// MinStack minStack = new MinStack();
+// var minStack = new MinStack();
 // minStack.push(-2);
 // minStack.push(0);
 // minStack.push(-3);
-// minStack.getMin();   --> 返回 -3.
+// minStack.getMin(); //--> 返回 -3.
 // minStack.pop();
-// minStack.top();      --> 返回 0.
-// minStack.getMin();   --> 返回 -2.
+// minStack.top(); //--> 返回 0.
+// minStack.getMin(); //--> 返回 -2.
+// console.log(minStack)
 
+// var obj = new MinStack()
+// obj.push("3")
+// obj.push("2")
+// obj.push("1")
+// console.log(obj)
+// var param_3 = obj.getMin()
+// console.log(param_3)
+// var param_2 = obj.pop()
+// console.log(param_2)
+// var param_5 = obj.getMin()
+// console.log(param_5)
 
 // 用栈实现队列
 class MyQueue {

@@ -2,6 +2,18 @@
 # 0 3 数据组 a,b = map(int, input().split())
 # aaabbaa 字符串 line = input()
 
+# line= read_line();        1
+
+# var arr=read_line().split(" ");         1 2 3 4
+# var n=parseInt(arr[0]);                 1
+# var m=parseInt(arr[1]);                 2
+
+# stack = []
+# for (var i = 0; i < arr.length; i++) {
+#     num = parseInt(arr[i])
+#     stack.push(num)
+# }
+
 # 样例输入
 # 1 2 第一行有两个数字 n,m，分别表示集合 A 和集合 B 的元素个数。
 # 1 第二行集合 A
