@@ -27,7 +27,21 @@ function f(x) {
   }
 }
 
-console.log(f('aa22')); ////////////////转换
+console.log(f('aa22')); // n = int(input())
+// for i in range(n):
+//     username = input()
+//     ans = []
+//     if username[0].isalpha(): #首字符必须是大写或者小写字母
+//         for i in username:
+//             if i.isdigit(): #数字
+//                 ans.append(1)
+//         if 1 in ans:
+//             print('Accept')
+//         else:
+//             print('Wrong')
+//     else:
+//         print('Wrong')
+////////////////转换
 
 arr.length; //len(arr)
 
