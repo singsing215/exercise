@@ -27,3 +27,15 @@ function f(x) {
     }
 }
 console.log(f('aa22'))
+
+
+////////////////转换
+arr.length
+    //len(arr)
+
+Math.floor(num) //floor向下取整int, round四舍五入, ceil向上取整
+    // int(num)
+
+a = String(123)
+b = parseInt("1234blue")
+console.log(typeof b)
