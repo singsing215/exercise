@@ -13,7 +13,7 @@ def findLength(A, B):
     return res
 # print(findLength([1,2,3,2,1], [3,2,1,4,7]))
 
-# 爬楼梯
+# 爬楼梯  0级
 def climbStairs(n):
     dp = {}
     dp[1] = 1
@@ -21,7 +21,7 @@ def climbStairs(n):
     for i in range(1+2,n+1):   # n>=3执行
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
-# print(climbStairs(4))
+print(climbStairs(2))
 
 # 最大子序和
 def maxSubArray(nums):
