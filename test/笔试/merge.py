@@ -201,7 +201,7 @@ def quick_sort(arr):
             right.append(i)
         else:
             left.append(i)            # 小于基准值放左边
-    return quick_sort(left) + [mid] + quick_sort(right)    # 使用迭代进行比较
+    return quick_sort(left) + [mid] + quick_sort(right)    # 使用迭代进行比较 a.concat(b)
 # 对大规模数据集进行快排，当分区的规模达到一定小时改用插入排序，插入排序在小数据规模时排序性能较好。
 # print(quick_sort([64, 34, 25, 12, 22, 11, 90]))
 

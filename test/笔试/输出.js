@@ -32,6 +32,19 @@ function letSto() {
 }
 // letSto() //0-9
 
+// 宏任务微任务
+// console.log('script start'); //1
+// setTimeout(function() {
+//     console.log('setTimeout'); //5
+// }, 0);
+// Promise.resolve().then(function() {
+//     console.log('promise1'); //3
+// }).then(function() {
+//     console.log('promise2'); //4
+// });
+// console.log('script end'); //2
+
+
 //数组
 var a = new Array(1024) //1024长度
 a[0102] = 3 //十进制=0102；十六进制=66
