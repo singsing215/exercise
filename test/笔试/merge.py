@@ -189,7 +189,9 @@ def numJewelsInStones(J, S):
     return sum(s in J for s in S)
 # print(numJewelsInStones("aA", "aAAbbbb"))
 
-# 快速排序 O(nlogn)# 从数据集中选取一个基准，然后让数据集的每个元素和基准值比较，小于基准值的元素放入左边分区大于基准值的元素放入右边分区，最后以左右两边分区为新的数据集进行递归分区，直到只剩一个元素。
+# 快速排序 O(nlogn)# 从数据集中选取一个基准，然后让数据集的每个元素和基准值比较，
+# 小于基准值的元素放入左边分区大于基准值的元素放入右边分区，
+# 最后以左右两边分区为新的数据集进行递归分区，直到只剩一个元素。
 def quick_sort(arr):
     if len(arr) < 2:
         return arr

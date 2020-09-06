@@ -57,7 +57,7 @@ const find = (num, k) => {
 
 // 有效的括号
 const isValid = (x) => {
-        if (x.length % 2) return false
+        if (x.length % 2 != 0) return false
         let stack = []
         for (i = 0; i < x.length; i++) {
             switch (x[i]) {
@@ -95,7 +95,7 @@ const isValid = (x) => {
         }
         return !stack.length
     }
-    // console.log(isValid("()(())"))
+    console.log(isValid("()(())"))
 
 // 删除最外层的括号
 const removeOuterParentheses = (x) => {

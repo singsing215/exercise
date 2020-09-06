@@ -1,8 +1,7 @@
 # 2 3 列表 A = [int(i) for i in input().split()]
 # 0 3 数据组 a,b = map(int, input().split())
-# aaabbaa 字符串 line = input()
-
-# line= read_line();        1
+# aaabbaa 字符串 line = input() 赛码
+# line= read_line();        1  牛客
 
 # var arr=read_line().split(" ");         1 2 3 4
 # var n=parseInt(arr[0]);                 1
