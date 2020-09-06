@@ -1,50 +1,3 @@
-//当 console.log 被调用的时候，匿名函数保持对外部变量 i 的引用，
-//此时for循环已经结束， i 的值被修改成了 10.
-//为了得到想要的结果，需要在每次循环中创建变量 i 的拷贝。
-function varSto() {
-    for (var i = 0; i < 10; i++) {
-        setTimeout(function() {
-            console.log(i);
-        }, 1000);
-    }
-}
-// varSto() //10个10
-
-//为了正确的获得循环序号，使用匿名包裹器(function(e) {})(i)立即执行函数
-function anony() {
-    for (var i = 0; i < 10; i++) {
-        (function(e) {
-            setTimeout(function() {
-                console.log(e);
-            }, 1000);
-        })(i);
-    }
-}
-// anony() //0-9
-
-//只在let所在的代码块作用域内有效
-function letSto() {
-    for (let i = 0; i < 10; i++) {
-        setTimeout(function() {
-            console.log(i);
-        }, 1000);
-    }
-}
-// letSto() //0-9
-
-// 宏任务微任务
-// console.log('script start'); //1
-// setTimeout(function() {
-//     console.log('setTimeout'); //5
-// }, 0);
-// Promise.resolve().then(function() {
-//     console.log('promise1'); //3
-// }).then(function() {
-//     console.log('promise2'); //4
-// });
-// console.log('script end'); //2
-
-
 //数组
 var a = new Array(1024) //1024长度
 a[0102] = 3 //十进制=0102；十六进制=66
@@ -110,3 +63,16 @@ const bbb = {
 var ary = [0, 1, 2]
 ary[10] = 10
     // console.log(ary.filter(x => x === undefined)) //[]返回一个新的、由通过测试的元素组成的数组，如果没有任何数组元素通过测试，则返回空数组。
+
+
+
+//二分查找
+function upper_bound_(n, v, a) {
+    if (v > a[n - 1]) return n + 1;
+    for (let i = 0; i < n; i++) {
+        if (v <= a[i]) {
+            return i + 1;
+        }
+    }
+}
+console.log(upper_bound_(5, 4, [1, 2, 4, 4, 5])) //3

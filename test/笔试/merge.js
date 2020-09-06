@@ -214,7 +214,7 @@ const throttle = (func, wait) => {
             }
         }
     }
-    // setInterval(throttle(func,1000),1000) // 一秒打出一次boom
+    // setInterval(throttle(func, 1000), 1000) // 一秒打出一次boom
 
 //用队列实现栈
 class MyStack {

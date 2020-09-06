@@ -189,7 +189,7 @@ def numJewelsInStones(J, S):
     return sum(s in J for s in S)
 # print(numJewelsInStones("aA", "aAAbbbb"))
 
-# 快速排序 O(nlogn)# 从数据集中选取一个基准，然后让数据集的每个元素和基准值比较，小于基准值的元素放入左边分区大于基准值的元素放入右边分区，最后以左右两边分区为新的数据集进行递归分区，直到只剩一个元素。
+# 快速排序 时间O(nlogn) 空间logn # 从数据集中选取一个基准，然后让数据集的每个元素和基准值比较，小于基准值的元素放入左边分区大于基准值的元素放入右边分区，最后以左右两边分区为新的数据集进行递归分区，直到只剩一个元素。
 def quick_sort(arr):
     if len(arr) < 2:
         return arr
@@ -205,7 +205,8 @@ def quick_sort(arr):
 # 对大规模数据集进行快排，当分区的规模达到一定小时改用插入排序，插入排序在小数据规模时排序性能较好。
 # print(quick_sort([64, 34, 25, 12, 22, 11, 90]))
 
-# 冒泡排序 O(n^2)# 重复比较两个元素，顺序错误就交换
+# 冒泡排序 时间复杂度: O(N^(1-2)); 空间复杂度: O(1)
+# # 重复比较两个元素，顺序错误就交换
 def bubbleSort(arr):
     for i in range(len(arr)):
         for j in range(0, len(arr)-1-i):
@@ -214,7 +215,8 @@ def bubbleSort(arr):
     return arr
 # print(bubbleSort([64, 34, 25, 12, 22, 11, 90]))
 
-# 插入排序 # 构建有序序列，对于未排序数据，在已排序序列中key从后向前扫描，找到相应位置并插入。
+# 插入排序 时间复杂度: O(N^(1-2)); 空间复杂度: O(1)
+# 构建有序序列，对于未排序数据，在已排序序列中key从后向前扫描，找到相应位置并插入。
 def insertionSort(arr): 
     for i in range(1, len(arr)): 
         key = arr[i] 
