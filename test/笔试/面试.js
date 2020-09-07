@@ -48,7 +48,7 @@ function letSto() {
 // 继承。既然要实现继承，那么首先要有一个父类
 // es5
 function Animal (name) {  // 定义一个动物类
-    this.name = name;    // 属性
+    this.name = name;    // 实例属性
     this.sleep = function(){    // 实例方法
       console.log(this.name + ' sleep');
     }
@@ -68,10 +68,10 @@ function Cat(){
 // console.log(cat instanceof Animal); //true 
 // console.log(cat instanceof Cat); //true
 
-// // ES6 中有类 class 的概念，类 class 的继承是通过 extends 来实现的
+// ES6 中有类 class 的概念，类 class 的继承是通过 extends 来实现的
 // class Animal {  // 定义一个动物类
 //     constructor(name) {
-//         this.name = name; // 属性
+//         this.name = name; // 实例属性
 //         this.sleep = function () {  // 实例方法
 //             console.log(this.name + ' sleep');
 //         };
@@ -86,12 +86,12 @@ function Cat(){
 //         super(name)
 //     }
 // }
-// var cat = new Cat('cat');
-// console.log(cat.name);
-// console.log(cat.sleep());
-// console.log(cat.eat('fish'));
-// console.log(cat instanceof Animal); //true 
-// console.log(cat instanceof Cat); //true
+// // var cat = new Cat('cat');
+// // console.log(cat.name); //cat
+// // console.log(cat.sleep()); //cat sleep
+// // console.log(cat.eat('fish')); //cat eat fish
+// // console.log(cat instanceof Animal); //true 
+// // console.log(cat instanceof Cat); //true
 
 
 // 输出json
