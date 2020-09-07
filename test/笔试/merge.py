@@ -13,7 +13,7 @@ def findLength(A, B):
     return res
 # print(findLength([1,2,3,2,1], [3,2,1,4,7]))
 
-# 爬楼梯
+# 爬楼梯  0级
 def climbStairs(n):
     dp = {}
     dp[1] = 1
@@ -21,7 +21,7 @@ def climbStairs(n):
     for i in range(1+2,n+1):   # n>=3执行
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
-# print(climbStairs(4))
+print(climbStairs(2))
 
 # 最大子序和
 def maxSubArray(nums):
@@ -203,11 +203,12 @@ def quick_sort(arr):
             right.append(i)
         else:
             left.append(i)            # 小于基准值放左边
-    return quick_sort(left) + [mid] + quick_sort(right)    # 使用迭代进行比较
+    return quick_sort(left) + [mid] + quick_sort(right)    # 使用迭代进行比较 a.concat(b)
 # 对大规模数据集进行快排，当分区的规模达到一定小时改用插入排序，插入排序在小数据规模时排序性能较好。
 # print(quick_sort([64, 34, 25, 12, 22, 11, 90]))
 
-# 冒泡排序 O(n^2)# 重复比较两个元素，顺序错误就交换
+# 冒泡排序 时间复杂度: O(N^(1-2)); 空间复杂度: O(1)
+# # 重复比较两个元素，顺序错误就交换
 def bubbleSort(arr):
     for i in range(len(arr)):
         for j in range(0, len(arr)-1-i):
@@ -216,7 +217,8 @@ def bubbleSort(arr):
     return arr
 # print(bubbleSort([64, 34, 25, 12, 22, 11, 90]))
 
-# 插入排序 # 构建有序序列，对于未排序数据，在已排序序列中key从后向前扫描，找到相应位置并插入。
+# 插入排序 时间复杂度: O(N^(1-2)); 空间复杂度: O(1)
+# 构建有序序列，对于未排序数据，在已排序序列中key从后向前扫描，找到相应位置并插入。
 def insertionSort(arr): 
     for i in range(1, len(arr)): 
         key = arr[i] 

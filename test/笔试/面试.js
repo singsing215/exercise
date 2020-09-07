@@ -1,0 +1,132 @@
+//当 console.log 被调用的时候，匿名函数保持对外部变量 i 的引用，
+//此时for循环已经结束， i 的值被修改成了 10.
+//为了得到想要的结果，需要在每次循环中创建变量 i 的拷贝。
+function varSto() {
+    for (var i = 0; i < 10; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    }
+}
+// varSto() //10个10
+
+//为了正确的获得循环序号，使用匿名包裹器(function(e) {})(i)立即执行函数
+function anony() {
+    for (var i = 0; i < 10; i++) {
+        (function(e) {
+            setTimeout(function() {
+                console.log(e);
+            }, 1000);
+        })(i);
+    }
+}
+// anony() //0-9
+
+//只在let所在的代码块作用域内有效
+function letSto() {
+    for (let i = 0; i < 10; i++) {
+        setTimeout(function() {
+            console.log(i);
+        }, 1000);
+    }
+}
+// letSto() //0-9
+
+// 宏任务微任务
+// console.log('script start'); //1
+// setTimeout(function() {
+//     console.log('setTimeout'); //5
+// }, 0);
+// Promise.resolve().then(function() {
+//     console.log('promise1'); //3
+// }).then(function() {
+//     console.log('promise2'); //4
+// });
+// console.log('script end'); //2
+
+// 输出json
+var obj = [
+    { id: 1, parent: null },
+    { id: 2, parent: 1 },
+    { id: 3, parent: 2 }
+]
+
+function treeObj(obj) {
+    return obj.sort((a, b) => b.parent - a.parent).reduce((acc, cur) => (acc ? {...cur, child: acc } : cur));
+} //reduce() 方法对数组中的每个元素执行由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
+// console.log(treeObj(obj))
+// {
+//     id: 1,
+//     parent: null,
+//     child: {
+//         id: 2,
+//         parent: 1,
+//         child: {
+//             id: 3,
+//             parent: 2
+//         }
+//     }
+// }
+
+//快速排序 O(nlogn)# 从数据集中选取一个基准，然后让数据集的每个元素和基准值比较，小于基准值的元素放入左边分区，
+//大于基准值的元素放入右边分区，最后以左右两边分区为新的数据集进行递归分区，直到只剩一个元素。不修改原数组。
+function quickSort(arr) {
+    if (arr.length < 2) { return arr; }
+    var mid = Math.floor(arr.length / 2); //选取基准，随便选哪个都可以，选中间的便于理解
+    var pivot = arr.splice(mid, 1)[0]; //将基准与原数组分离
+    var left = []; //定义基准值左右两个数列
+    var right = [];
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] < pivot) {
+            left.push(arr[i]); //小于基准值放左边
+        } else {
+            right.push(arr[i]); //大于基准值放右边
+        }
+    }
+    return quickSort(left).concat([pivot], quickSort(right)); //使用迭代进行比较，合并数组
+};
+// console.log(quickSort([2, 4, 3, 9, 5, 6, 7, 1]))
+
+//冒泡排序 O(n^2)，最好n,最坏n^2# 重复比较两个元素，顺序错误就交换，修改原数组。
+function bubbleSort(arr) {
+    var temp;
+    for (var i = 0; i < arr.length; i++) { //后
+        for (var j = 0; j < arr.length - i - 1; j++) { //前-i
+            if (arr[j] > arr[j + 1]) { //如果前>后，换位
+                temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    };
+    return arr;
+}
+// console.log(bubbleSort([2, 4, 3, 9, 5, 6, 7, 1]))
+
+//插入排序 时间复杂度: O(N^(1-2)); 空间复杂度: O(1)
+//构建有序序列，对于未排序数据，在已排序序列中key从后向前扫描，找到相应位置并插入。修改原数组。
+function insertSort(arr) {
+    for (var i = 1; i < arr.length; i++) {
+        var key = arr[i];
+        var j = i - 1;
+        while (j >= 0 && key < arr[j]) { //key从后向前扫描
+            arr[j + 1] = arr[j];
+            j--; //向右移动一位，为新元素腾出空间
+        }
+        arr[j + 1] = key; //新元素
+    }
+    return arr;
+}
+// console.log(insertSort([2, 4, 3, 9, 5, 6, 7, 1]))
+
+
+console.log('script start'); //1
+setTimeout(function() {
+    console.log('setTimeout'); //5
+}, 0);
+Promise.resolve().then(function() {
+    console.log('promise1'); //3
+}).then(function() {
+    console.log('promise2'); //4
+});
+console.log('script end'); //2

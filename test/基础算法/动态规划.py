@@ -1,11 +1,9 @@
 #最长重复子数组    动态规划
 def findLength(A, B):
-    n = len(A)
-    m = len(B)
     res = 0
-    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
+    dp = [[0 for _ in range(len(A) + 1)] for _ in range(len(B) + 1)]
+    for i in range(1, len(B) + 1):
+        for j in range(1, len(A) + 1):
             if B[i - 1] == A[j - 1]:
                 dp[i][j] = dp[i - 1][j - 1] + 1
                 res = max(res, dp[i][j])
@@ -16,7 +14,7 @@ def findLength(A, B):
 def climbStairs(n):
     dp = {}
     dp[1] = 1
-    dp[2] = 2
+    dp[2] = 2  # {1: 1, 2: 2}
     for i in range(1+2,n+1):   # n>=3执行
         dp[i] = dp[i-1] + dp[i-2]
     return dp[n]
@@ -82,4 +80,4 @@ def generate(numRows):
             if(dp[i][j]==0):
                 dp[i][j]=dp[i-1][j-1]+dp[i-1][j]
     return dp
-print(generate(5))
+# print(generate(5))

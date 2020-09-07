@@ -14,6 +14,10 @@ var isEmail = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
 var isQq = /^[1-9][0-9]{4,10}$/;
 // console.log(isQq.test("65974040"));
 
+//千位分隔符
+// console.log("12345678".replace(/(?=(\B\d{3})+$)/g, ','))
+// console.log(parseInt('11123231.3213').toLocaleString()) //小数部分四舍五入
+
 // # 首字母，至少一字母一数字，只能字母数字 A1
 function f(x) {
     if (/[A-Za-z]/.test(x[0])) {
@@ -26,29 +30,30 @@ function f(x) {
         return false
     }
 }
-console.log(f('aa22'))
-    // n = int(input())
-    // for i in range(n):
-    //     username = input()
-    //     ans = []
-    //     if username[0].isalpha(): #首字符必须是大写或者小写字母
-    //         for i in username:
-    //             if i.isdigit(): #数字
-    //                 ans.append(1)
-    //         if 1 in ans:
-    //             print('Accept')
-    //         else:
-    //             print('Wrong')
-    //     else:
-    //         print('Wrong')
+// console.log(f('aa22'))
+
+// n = int(input())
+// for i in range(n):
+//     username = input()
+//     ans = []
+//     if username[0].isalpha(): #首字符必须是大写或者小写字母
+//         for i in username:
+//             if i.isdigit(): #数字
+//                 ans.append(1)
+//         if 1 in ans:
+//             print('Accept')
+//         else:
+//             print('Wrong')
+//     else:
+//         print('Wrong')
 
 ////////////////转换
-arr.length
-    //len(arr)
+// arr.length
+//len(arr)
 
-Math.floor(num) //floor向下取整int, round四舍五入, ceil向上取整
-    // int(num)
+// Math.floor(num) //floor向下取整int, round四舍五入, ceil向上取整
+// int(num)
 
 a = String(123)
 b = parseInt("1234blue")
-console.log(typeof b)
+    // console.log(typeof b) //number
