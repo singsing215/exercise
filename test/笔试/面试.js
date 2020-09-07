@@ -44,6 +44,56 @@ function letSto() {
 // });
 // console.log('script end'); //2
 
+//ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
+// 继承。既然要实现继承，那么首先要有一个父类
+// es5
+function Animal (name) {  // 定义一个动物类
+    this.name = name;    // 属性
+    this.sleep = function(){    // 实例方法
+      console.log(this.name + ' sleep');
+    }
+}
+Animal.prototype.eat = function(food) {  // 原型方法eat
+    console.log(this.name + ' eat ' + food);
+};
+// 原型链继承。将父类的实例作为子类的原型
+function Cat(){ 
+}
+// Cat.prototype = new Animal();  //JS只有一种结构object ， object私有属性指向它的构造函数的原型对象prototype 
+// Cat.prototype.name = 'cat';  
+// var cat = new Cat();
+// console.log(cat.name);
+// console.log(cat.sleep());
+// console.log(cat.eat('fish'));
+// console.log(cat instanceof Animal); //true 
+// console.log(cat instanceof Cat); //true
+
+// // ES6 中有类 class 的概念，类 class 的继承是通过 extends 来实现的
+// class Animal {  // 定义一个动物类
+//     constructor(name) {
+//         this.name = name; // 属性
+//         this.sleep = function () {  // 实例方法
+//             console.log(this.name + ' sleep');
+//         };
+//     }
+//     eat(food) {  // 原型方法eat
+//         console.log(this.name + ' eat ' + food);
+//     }
+// }
+// // 原型链继承。将父类的实例作为子类的原型
+// class Cat extends Animal{
+//     constructor(name) {
+//         super(name)
+//     }
+// }
+// var cat = new Cat('cat');
+// console.log(cat.name);
+// console.log(cat.sleep());
+// console.log(cat.eat('fish'));
+// console.log(cat instanceof Animal); //true 
+// console.log(cat instanceof Cat); //true
+
+
 // 输出json
 var obj = [
     { id: 1, parent: null },
@@ -118,15 +168,3 @@ function insertSort(arr) {
     return arr;
 }
 // console.log(insertSort([2, 4, 3, 9, 5, 6, 7, 1]))
-
-
-console.log('script start'); //1
-setTimeout(function() {
-    console.log('setTimeout'); //5
-}, 0);
-Promise.resolve().then(function() {
-    console.log('promise1'); //3
-}).then(function() {
-    console.log('promise2'); //4
-});
-console.log('script end'); //2
