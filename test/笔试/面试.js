@@ -70,7 +70,7 @@ function Cat(){
 
 // ES6 中有类 class 的概念，类 class 的继承是通过 extends 来实现的
 // class Animal {  // 定义一个动物类
-//     constructor(name) {
+//     constructor(name) {  //构造方法constructor()用来定义类，this代表实例对象。
 //         this.name = name; // 实例属性
 //         this.sleep = function () {  // 实例方法
 //             console.log(this.name + ' sleep');
