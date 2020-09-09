@@ -44,21 +44,29 @@ function letSto() {
 // });
 // console.log('script end'); //2
 
+// setTimeout(_ => console.log(4)) //4
+// new Promise(resolve => {
+//     resolve()
+//     console.log(1) //1 new Promise在实例化的过程中所执行的代码都是同步进行的
+// }).then(_ => {
+//     console.log(3) //3 而then中注册的回调才是异步执行的
+// })
+// console.log(2) //2
+
 //ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
 // 继承。既然要实现继承，那么首先要有一个父类
 // es5
-function Animal (name) {  // 定义一个动物类
-    this.name = name;    // 实例属性
-    this.sleep = function(){    // 实例方法
-      console.log(this.name + ' sleep');
+function Animal(name) { // 定义一个动物类
+    this.name = name; // 实例属性
+    this.sleep = function() { // 实例方法
+        console.log(this.name + ' sleep');
     }
 }
-Animal.prototype.eat = function(food) {  // 原型方法eat
+Animal.prototype.eat = function(food) { // 原型方法eat
     console.log(this.name + ' eat ' + food);
 };
 // 原型链继承。将父类的实例作为子类的原型
-function Cat(){ 
-}
+function Cat() {}
 // Cat.prototype = new Animal();  //JS只有一种结构object ， object私有属性指向它的构造函数的原型对象prototype 
 // Cat.prototype.name = 'cat';  
 // var cat = new Cat();
