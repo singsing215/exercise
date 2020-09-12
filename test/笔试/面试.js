@@ -164,9 +164,9 @@ function quickSort(arr) {
 //冒泡排序 O(n^2)，最好n,最坏n^2# 重复比较两个元素，顺序错误就交换，修改原数组。
 function bubbleSort(arr) {
     var temp;
-    for (var i = 0; i < arr.length; i++) { //后
-        for (var j = 0; j < arr.length - i - 1; j++) { //前-i
-            if (arr[j] > arr[j + 1]) { //如果前>后，换位
+    for (var i = 0; i < arr.length; i++) { //右
+        for (var j = 0; j < arr.length - i - 1; j++) { //左-i
+            if (arr[j] > arr[j + 1]) { //如果左>右，换位
                 temp = arr[j];
                 arr[j] = arr[j + 1];
                 arr[j + 1] = temp;
