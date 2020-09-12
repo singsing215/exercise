@@ -53,6 +53,22 @@ function letSto() {
 // })
 // console.log(2) //2
 
+function Fai(){
+    getName = function (){console.log(1)};
+    return this;
+}
+Fai.getName = function (){console.log(2)};
+Fai.prototype.getName = function (){console.log(3)};
+var getName = function (){console.log(4)};
+function getName(){console.log(5)};
+// Fai.getName()//2
+// getName()//4
+// // Fai().getName()//报错
+// getName()//4
+// new Fai.getName()//2
+// new Fai().getName()//3
+// new new Fai().getName()//3
+
 //ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
 // 继承。既然要实现继承，那么首先要有一个父类
 // es5
