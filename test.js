@@ -101,15 +101,27 @@
 // console.log(a,b)
 
 
-var hexToRgb = function(hex) {
-    var rgb = [];
-    hex = hex.substr(1);//去除前缀 # 号
-    if (hex.length === 3) { // 处理 "#abc" 成 "#aabbcc"
-        hex = hex.replace(/(.)/g, '$1$1');
+// var hexToRgb = function(hex) {
+//     var rgb = [];
+//     hex = hex.substr(1);//去除前缀 # 号
+//     if (hex.length === 3) { // 处理 "#abc" 成 "#aabbcc"
+//         hex = hex.replace(/(.)/g, '$1$1');
+//     }
+//     hex.replace(/../g, function(color){
+//         rgb.push(parseInt(color, 0x10));//按16进制将字符串转换为数字
+//     });
+//     return "rgb(" + rgb.join(",") + ")";
+// };
+// console.log(hexToRgb("#FFFFFF"))
+
+
+
+function average(nums) {
+    for (i=0;i<nums.length;i++){
+        //console.log(nums[i])
+        // if(nums[i] === null) return 0
+        
+        }
+    return nums.reduce((a, b) => a + b) / nums.length;
     }
-    hex.replace(/../g, function(color){
-        rgb.push(parseInt(color, 0x10));//按16进制将字符串转换为数字
-    });
-    return "rgb(" + rgb.join(",") + ")";
-};
-console.log(hexToRgb("#FFFFFF"))
+console.log(average([1,null,3,4,5]))

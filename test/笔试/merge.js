@@ -28,6 +28,11 @@ const sortNumb = (nums) => {
     }
     // console.log(sortNumb([3,34,30,5,9])) //a+b [ 9, 5, 34, 30, 3 ] //b+a [ 9, 5, 34, 30, 3 ]
 
+//平均值
+function average(nums) {
+    return nums.reduce((a, b) => a + b) / nums.length;
+}
+
 //合并两个数组
 const array1 = ['a', 'b', 'c'];
 const array2 = ['d', 'e', 'f'];
