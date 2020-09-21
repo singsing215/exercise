@@ -116,12 +116,20 @@
 
 
 
-function average(nums) {
-    for (i=0;i<nums.length;i++){
-        //console.log(nums[i])
-        // if(nums[i] === null) return 0
+// function average(nums) {
+//     for (i=0;i<nums.length;i++){
+//         //console.log(nums[i])
+//         // if(nums[i] === null) return 0
         
-        }
-    return nums.reduce((a, b) => a + b) / nums.length;
-    }
-console.log(average([1,null,3,4,5]))
+//         }
+//     return nums.reduce((a, b) => a + b) / nums.length;
+//     }
+// console.log(average([1,null,3,4,5]))
+
+
+function  sortString(str){
+    return str.split('').reverse().join('');
+}
+var str = 'jireng    uhungerv     alley'
+var str2 = sortString(str)
+console.log(str2)
