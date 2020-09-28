@@ -127,9 +127,114 @@
 // console.log(average([1,null,3,4,5]))
 
 
-function  sortString(str){
-    return str.split('').reverse().join('');
-}
-var str = 'jireng    uhungerv     alley'
-var str2 = sortString(str)
-console.log(str2)
+// function  sortString(str){
+//     return str.split('').reverse().join('');
+// }
+// var str = 'jireng    uhungerv     alley'
+// var str2 = sortString(str)
+// console.log(str2)
+
+// var f = 'abc'
+// f[1] = 'f'
+// console.log(f)
+
+// console.log(null==null)
+
+// var state = ''//1
+// function func(){
+//     var state = ''//2
+//     $.ajax({
+//         type:type,
+//         url:url,
+//         cache:cache,
+//         data:data,
+//         dataType:dataType,
+//         headers:{
+//             "Content-Type":"application/json;charset=UTF-8"
+//         },
+//         success:function(){
+//             state = 'success'
+//         },
+//         error:function(){
+//             this.state = 'error'
+//         }
+//     });
+// }
+// func()
+
+// arr = [1,2,3]
+// length = arr.length
+// console.log(length)
+
+// var v = "he";
+// (function(){
+//     console.log(v);
+//     function v(){
+//         var v = "ha";
+//         console.log(v)
+//     }
+//     v();
+// })()
+
+// function listToTree(arr) {
+//     var map = {},tree= [];
+//     for (i = 0; i < arr.length; i ++) {
+//         map[arr[i].id] = arr[i]; 
+//         arr[i].children = []; 
+//     }
+//     for (i = 0; i < arr.length; i += 1) {
+//         var node = arr[i];
+//         if (node.pid !== null) {
+//             map[node.pid].children.push(node);
+//         } else {
+//             tree.push(node);
+//         }
+//     }
+//     return tree;
+// }
+// console.log(listToTree([{"id":1,"pid":null,"children":[{"id":11,"pid":"1","children":[]},{"id":12,"pid":"1","children":[]}]}]))
+// // listToTree([{"id":1,"pid":"-1","children":[{"id":11,"pid":"1","children":[]},{"id":12,"pid":"1","children":[]}]}]); //[{"id":1,"pid":"-1","children":[{"id":11,"pid":"1","children":[]},{"id":12,"pid":"1","children":[]}]}]
+
+// function arr2Tree (arr, pid) {
+//     let tree = []
+//     let temp
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i].parentId === pid) {
+//         let obj = {id: arr[i].id, name: arr[i].name}
+//         temp = arr2Tree(arr, arr[i].id)
+//         if (temp.length > 0) {
+//           obj.children = temp
+//         }
+//         tree.push(obj)
+//       }
+//     }
+//     return tree
+//   }
+
+// function unique (arr) {
+//     return Array.from(new Set(arr))
+//   }
+//   var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+//   console.log(unique(arr))
+
+// function validDate (date1, date2) {
+//     let ans = []
+//     const start = new Date(date1)
+//     const end = new Date(date2)
+//     const daySeconds = 24*60*60*1000
+//     const startTime = start.getTime()
+//     const endTime = end.getTime()
+//     const range = endTime - startTime
+//     let total = 0
+//     while (total <= range && range > 0) {
+//         ans.push(new Date(startTime + total).toLocaleDateString().replace(/\//g, '-'))
+//         total += daySeconds
+//     }
+//     return ans
+// };
+
+// console.log(validDate("2015-02-08", "2015-03-03"))
+// // console.log(validDate(new Date("2015-02-08"), new Date("2015-03-03")))
+
+data='2020-9-29 ~ 2020-10-3'
+console.log(data.split("~")[1])
