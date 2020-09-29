@@ -236,5 +236,97 @@
 // console.log(validDate("2015-02-08", "2015-03-03"))
 // // console.log(validDate(new Date("2015-02-08"), new Date("2015-03-03")))
 
-data='2020-9-29 ~ 2020-10-3'
-console.log(data.split("~")[1])
+// data='2020-9-29 ~ 2020-10-3'
+// console.log(data.split("~")[1])
+
+// console.log(typeof [],typeof null,typeof undefined,typeof 'false',typeof function (){})
+
+// history.replaceState({},'hello','www')
+// location.reload()
+// location.hash = 'seewo'
+// history.go(-1)
+
+// const p = new Promise((res,rej)=>{
+//     res('s1')
+//     rej('err')
+//     res('s2')
+// })
+// p.then((res)=>{
+//     console.log('then:',res)
+// }).catch((err)=>{
+//     console.log('c:',err)
+// })
+
+// function Fn(){}
+// function Fn2(){}
+// Fn.prototype = new Fn2()
+// Fn2.prototype = new Fn()
+// const fn = new Fn()
+// const fn2 = new Fn2()
+// console.log(fn.constructor,fn2.constructor)
+
+// var a = 10
+// function b(){
+//     console.log(a)
+//     var a = 20
+//     console.log(a)
+// }
+// b()
+
+// for(var i = 0;i<3;i++){
+//     (function(num){
+//         const fn = num => console.log(num)
+//         setTimeout(fn,0)
+//     })(i)
+// }
+
+// for(var i = 0;i<3;i++){
+//     (function(num){
+//         setTimeout(()=>console.log(num),0)
+//     })(i)
+// }
+
+///////////////////cvte1
+// function toCamelCase(str){
+//     var regExp=/[-_]\w/ig;
+//     return str.replace(regExp,function(match){
+//           return match.charAt(1).toUpperCase();
+//      });
+// }
+// console.log(toCamelCase ('hello world'))
+
+// a = '1,{{as}}.2,{{as}}.3,{{as}}.4,{{as}}.'
+// ans = ''
+// list = a.split(".")
+// for(i in list){
+//     innerList = list[i].split(",")
+//     b = innerList[1]
+//     c = b.replace('{','').replace('{','').replace('}','').replace('}','')
+//     console.log(c)
+// }
+// // console.log(a.split("."))
+
+///////////////////cvte2
+// function main(){
+//     console.log('main excute')
+// }
+// Function.prototype.before = function(fn){
+//     var _this = this;       //用来保存调用这个函数的引用，如myFunc调用此函数，则_this指向myFunc
+//     return function(){      //返回一个函数，相当于一个代理函数，也就是说，这里包含了原函数和新函数，原函数指的是myFunc，新函数指的是fn
+//         fn.apply(this,arguments);   //修正this的指向，将this指针指向fn，将myFunc接收的参数传给fn处理。
+//         return _this.apply(this,arguments);     //执行原函数
+//     }
+// }
+// Function.prototype.after = function(fn){
+//     var _this = this;
+//     return function(){
+//         var r = _this.apply(this,arguments); //先执行原函数，也就是myFunc
+//         fn.apply(this,arguments);   //再执行新函数
+//         return r;
+//     }
+// }
+// main.before(function (){
+//     console.log('before');
+// }).after(function (){
+//     console.log('after')
+// })()
