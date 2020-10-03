@@ -353,3 +353,22 @@
 //     },0)
 // }
 
+// setTimeout(function(){
+//     console.log(1)
+// },100)
+// setTimeout(function (){
+//     console.log(2)
+// },0)
+// console.log(3)
+
+// var arr=[]
+// console.log(typeof arr)
+
+// var string = 'string'
+// var number = 0
+// var bool = true
+// console.log(number || string)
+// console.log(number && string)
+// console.log(bool || number)
+// console.log(bool && number)
+
