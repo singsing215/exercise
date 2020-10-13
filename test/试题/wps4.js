@@ -1,7 +1,7 @@
 function num(str) {
     var set = {};
     var maxNum = -1;
-    var maxStr = []; tr
+    var maxStr = [];
     for(i = 0; i < str.length; i++) {
         var s = str[i];
         if ( set[s] ) set[s]++;

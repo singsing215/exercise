@@ -32,7 +32,7 @@ function letSto() {
 }
 // letSto() //0-9
 
-// 宏任务微任务
+// 宏任务微任务1
 // console.log('script start'); //1
 // setTimeout(function() {
 //     console.log('setTimeout'); //5
@@ -44,6 +44,7 @@ function letSto() {
 // });
 // console.log('script end'); //2
 
+// 宏任务微任务2
 // setTimeout(_ => console.log(4)) //4
 // new Promise(resolve => {
 //     resolve()
@@ -52,22 +53,6 @@ function letSto() {
 //     console.log(3) //3 而then中注册的回调才是异步执行的
 // })
 // console.log(2) //2
-
-function Fai(){
-    getName = function (){console.log(1)};
-    return this;
-}
-Fai.getName = function (){console.log(2)};
-Fai.prototype.getName = function (){console.log(3)};
-var getName = function (){console.log(4)};
-function getName(){console.log(5)};
-// Fai.getName()//2
-// getName()//4
-// // Fai().getName()//报错
-// getName()//4
-// new Fai.getName()//2
-// new Fai().getName()//3
-// new new Fai().getName()//3
 
 //ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
 // 继承。既然要实现继承，那么首先要有一个父类
@@ -117,6 +102,22 @@ function Cat() {}
 // // console.log(cat instanceof Animal); //true 
 // // console.log(cat instanceof Cat); //true
 
+//继承debug
+function Fai(){
+    getName = function (){console.log(1)};
+    return this;
+}
+Fai.getName = function (){console.log(2)};
+Fai.prototype.getName = function (){console.log(3)};
+var getName = function (){console.log(4)};
+function getName(){console.log(5)};
+// Fai.getName()//2
+// getName()//4
+// // Fai().getName()//报错
+// getName()//4
+// new Fai.getName()//2
+// new Fai().getName()//3
+// new new Fai().getName()//3
 
 // 输出json
 var obj = [
@@ -124,7 +125,6 @@ var obj = [
     { id: 2, parent: 1 },
     { id: 3, parent: 2 }
 ]
-
 function treeObj(obj) {
     return obj.sort((a, b) => b.parent - a.parent).reduce((acc, cur) => (acc ? {...cur, child: acc } : cur));
 } //reduce() 方法对数组中的每个元素执行由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
@@ -192,3 +192,17 @@ function insertSort(arr) {
     return arr;
 }
 // console.log(insertSort([2, 4, 3, 9, 5, 6, 7, 1]))
+
+//闭包加一
+function A() {
+    var count = 0;
+    function B() {
+       count ++;
+       console.log(count);
+    }
+    return B;
+}
+var C = A();
+// C();// 1
+// C();// 2
+// C();// 3
