@@ -1,3 +1,21 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //当 console.log 被调用的时候，匿名函数保持对外部变量 i 的引用，
 //此时for循环已经结束， i 的值被修改成了 10.
 //为了得到想要的结果，需要在每次循环中创建变量 i 的拷贝。
@@ -101,6 +119,17 @@ function Cat() {}
 // // console.log(cat.eat('fish')); //cat eat fish
 // // console.log(cat instanceof Animal); //true 
 // // console.log(cat instanceof Cat); //true
+//ES6--2
+// class Person{
+//     constructor(age){
+//         this.age = age
+//     }
+//     say(){  // 原型方法
+//         console.log(this.age)
+//     }
+// }
+// const person = new Person(20)//20
+// person.say()
 
 //继承debug
 function Fai(){
