@@ -1,21 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //当 console.log 被调用的时候，匿名函数保持对外部变量 i 的引用，
 //此时for循环已经结束， i 的值被修改成了 10.
 //为了得到想要的结果，需要在每次循环中创建变量 i 的拷贝。
@@ -71,6 +53,20 @@ function letSto() {
 //     console.log(3) //3 而then中注册的回调才是异步执行的
 // })
 // console.log(2) //2
+
+// 宏任务微任务3
+// Promise.resolve().then(function() {
+//     console.log('1'); //1
+//     setTimeout(function() {
+//         console.log('2'); //3
+//     }, 0);
+// });
+// setTimeout(function() {
+//     console.log('3'); //2
+//     Promise.resolve().then(function() {
+//         console.log('4'); //4
+//     })
+// }, 0);
 
 //ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
 // 继承。既然要实现继承，那么首先要有一个父类
@@ -132,14 +128,15 @@ function Cat() {}
 // person.say()
 
 //继承debug
-function Fai(){
-    getName = function (){console.log(1)};
+function Fai() {
+    getName = function() { console.log(1) };
     return this;
 }
-Fai.getName = function (){console.log(2)};
-Fai.prototype.getName = function (){console.log(3)};
-var getName = function (){console.log(4)};
-function getName(){console.log(5)};
+Fai.getName = function() { console.log(2) };
+Fai.prototype.getName = function() { console.log(3) };
+var getName = function() { console.log(4) };
+
+function getName() { console.log(5) };
 // Fai.getName()//2
 // getName()//4
 // // Fai().getName()//报错
@@ -154,6 +151,7 @@ var obj = [
     { id: 2, parent: 1 },
     { id: 3, parent: 2 }
 ]
+
 function treeObj(obj) {
     return obj.sort((a, b) => b.parent - a.parent).reduce((acc, cur) => (acc ? {...cur, child: acc } : cur));
 } //reduce() 方法对数组中的每个元素执行由您提供的reducer函数(升序执行)，将其结果汇总为单个返回值。
@@ -225,9 +223,10 @@ function insertSort(arr) {
 //闭包加一
 function A() {
     var count = 0;
+
     function B() {
-       count ++;
-       console.log(count);
+        count++;
+        console.log(count);
     }
     return B;
 }

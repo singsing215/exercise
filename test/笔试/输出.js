@@ -75,4 +75,4 @@ function upper_bound_(n, v, a) {
         }
     }
 }
-console.log(upper_bound_(5, 4, [1, 2, 4, 4, 5])) //3
+// console.log(upper_bound_(5, 4, [1, 2, 4, 4, 5])) //3
