@@ -56,17 +56,17 @@ function letSto() {
 
 // 宏任务微任务3
 // Promise.resolve().then(function() {
-//     console.log('1'); //1
+//     console.log('1'); 
 //     setTimeout(function() {
-//         console.log('2'); //3
+//         console.log('2'); 
 //     }, 0);
 // });
 // setTimeout(function() {
-//     console.log('3'); //2
+//     console.log('3'); 
 //     Promise.resolve().then(function() {
-//         console.log('4'); //4
+//         console.log('4'); 
 //     })
-// }, 0);
+// }, 0);//1 3 4 2
 
 //ES5 中是通过设置构造函数的 prototype 属性，来实现继承的
 // 继承。既然要实现继承，那么首先要有一个父类
