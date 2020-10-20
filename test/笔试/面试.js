@@ -44,13 +44,13 @@ function letSto() {
 // });
 // console.log('script end'); //2
 
-// 宏任务微任务2
+// // 宏任务微任务2
 // setTimeout(_ => console.log(4)) //4
 // new Promise(resolve => {
-//     resolve()
-//     console.log(1) //1 new Promise在实例化的过程中所执行的代码都是同步进行的
+//     resolve();
+//     console.log(1); //1 new Promise在实例化的过程中所执行的代码都是同步进行的
 // }).then(_ => {
-//     console.log(3) //3 而then中注册的回调才是异步执行的
+//     console.log(3); //3 而then中注册的回调才是异步执行的
 // })
 // console.log(2) //2
 
@@ -174,29 +174,28 @@ function treeObj(obj) {
 function quickSort(arr) {
     if (arr.length < 2) { return arr; }
     var mid = Math.floor(arr.length / 2); //选取基准，随便选哪个都可以，选中间的便于理解
-    var pivot = arr.splice(mid, 1)[0]; //将基准与原数组分离
+    var std = arr.splice(mid, 1)[0]; //将基准与原数组分离
     var left = []; //定义基准值左右两个数列
     var right = [];
     for (var i = 0; i < arr.length; i++) {
-        if (arr[i] < pivot) {
+        if (arr[i] < std) {
             left.push(arr[i]); //小于基准值放左边
         } else {
             right.push(arr[i]); //大于基准值放右边
         }
     }
-    return quickSort(left).concat([pivot], quickSort(right)); //使用迭代进行比较，合并数组
+    return quickSort(left).concat([std], quickSort(right)); //使用迭代进行比较，合并数组
 };
 // console.log(quickSort([2, 4, 3, 9, 5, 6, 7, 1]))
 
 //冒泡排序 O(n^2)，最好n,最坏n^2# 重复比较两个元素，顺序错误就交换，修改原数组。
 function bubbleSort(arr) {
-    var temp;
     for (var i = 0; i < arr.length; i++) { //右
         for (var j = 0; j < arr.length - i - 1; j++) { //左-i
             if (arr[j] > arr[j + 1]) { //如果左>右，换位
-                temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+                temp = arr[j]; //temp = 左
+                arr[j] = arr[j + 1]; //换位,左=右
+                arr[j + 1] = temp; //换位,左=右
             }
         }
     };
@@ -211,7 +210,7 @@ function insertSort(arr) {
         var key = arr[i];
         var j = i - 1;
         while (j >= 0 && key < arr[j]) { //key从后向前扫描
-            arr[j + 1] = arr[j];
+            arr[j + 1] = arr[j]; //从后向前
             j--; //向右移动一位，为新元素腾出空间
         }
         arr[j + 1] = key; //新元素
@@ -221,16 +220,15 @@ function insertSort(arr) {
 // console.log(insertSort([2, 4, 3, 9, 5, 6, 7, 1]))
 
 //闭包加一
-function A() {
-    var count = 0;
-
-    function B() {
-        count++;
-        console.log(count);
+function addOne(){
+    var n = 0;
+    function add(){
+       n++;
+       console.log(n);
     }
-    return B;
+    return add;
 }
-var C = A();
-// C();// 1
-// C();// 2
-// C();// 3
+// var a1 = addOne(); //注意，函数名只是一个标识（指向函数的指针），而（）才是执行函数；
+// a1();    //1
+// a1();    //2  第二次调用n变量还在内存中
+

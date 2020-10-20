@@ -75,3 +75,39 @@ setTimeout(function() { //1.宏任务 记为 setTimeout2
 // 执行process3 打印出 10
 // 执行then3 打印出 12
 // 最终打印顺序为：1 7 6 8 2 4 3 5 9 11 10 12
+
+
+console.log('1'); 
+setTimeout(function() {
+    console.log('2');
+    process.nextTick(function() { 
+        console.log('3'); 
+    })
+    new Promise(function(resolve) {
+        console.log('4'); 
+        resolve();
+    }).then(function() { 
+        console.log('5') 
+    })
+})
+process.nextTick(function() { 
+    console.log('6'); 
+})
+new Promise(function(resolve) {
+    console.log('7'); 
+    resolve();
+}).then(function() { 
+    console.log('8') 
+})
+setTimeout(function() { 
+    console.log('9'); 
+    process.nextTick(function() { 
+        console.log('10'); 
+    })
+    new Promise(function(resolve) { 
+        console.log('11'); 
+        resolve();
+    }).then(function() { 
+        console.log('12') 
+    })
+})

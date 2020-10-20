@@ -12,7 +12,7 @@ function unique (arr) {
   }
 // console.log(unique([1,1,'true','true',true,false,false,null, NaN, NaN,'NaN', {},{}]))
 
-//利用sort()排序方法，for循环原数组，对比相邻元素。
+//数组去重利用sort()排序方法，for循环原数组，对比相邻元素。
 function unique(arr) {
     arr = arr.sort()
     var arrry= [arr[0]]
@@ -25,7 +25,7 @@ function unique(arr) {
 }
 // console.log(unique([1,1,'true','true',true,true, NaN, NaN,'NaN', 0,{}]))
 
-//新建空数组，for循环原数组，用indexOf判断两个数组是否存在相同元素，如果有相同的值则跳过，不同push。
+//数组去重新建空数组，for循环原数组，用indexOf判断两个数组是否存在相同元素，如果有相同的值则跳过，不同push。
 function unique(arr) {
     var array = [];
     for (var i = 0; i < arr.length; i++) {
