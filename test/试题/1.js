@@ -35,5 +35,5 @@
 //   return charList[index];
 // }
 // console.log(find('str fsafd  asdadsds'))
-var a=[1,1,1]
+var a = [1, 1, 1]
 console.log(a instanceof Array)
