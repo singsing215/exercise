@@ -1,0 +1,42 @@
+<div id="container">
+    <header>HEADER</header>
+    <section id="main">
+        <div id="jumbotron">jumbotron</div>
+        <div id="content">content</div>
+    </section>
+    <footer>FOOTER</footer>
+</div>
+
+
+<style>
+    * {
+        margin: 0
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    header {
+        background: #999;
+        flex: 0 0 auto;
+    }
+
+    #main {
+        background: orange;
+        flex: 1 0 auto;
+    }
+
+    #jumbotron {
+        background: rgb(0, 183, 255);
+        padding: 4rem 0rem;
+        margin-bottom: 1rem;
+    }
+
+    footer {
+        background: #333;
+        flex: 0 0 auto;
+    }
+</style>
